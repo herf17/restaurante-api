@@ -105,5 +105,6 @@ Requerimientos funcionales de la Aplicación
 •	tbl_cliente: aquí se debe pedir al usuario que introduzca nuevas categorías, modificarlas y eliminarlas.
 •	Cada pantalla de mantenimiento debe permitir Adicionar, modificar, eliminar los datos de cada tabla.
 
+        //*** Prototipo de la primera parte. Listo***//
+
 4.	Pantalla de Creación de Ordenes: En esta pantalla se gestiona la creación de Órdenes. Al acceder a esta pantalla se deben mostrar todas las mesas (accediendo al listado de mesas en la tabla tbl_mesa), en color verde las mesas que tengan el estado =“L” y en Rojo las mesas que tengan el estado “O”. Las mesas se deben crear de manera dinámica a partir de botones. 
-5.  Un nuevo cambio
