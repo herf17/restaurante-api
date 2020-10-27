@@ -41,15 +41,15 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvReportesDeMesa = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.dgvReportesDeMesa = new System.Windows.Forms.DataGridView();
             this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeMesa)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeMesa)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -166,23 +166,6 @@
             // 
             // groupBox1
             // 
-            // 
-            // dgvReportesDeMesa
-            // 
-            this.dgvReportesDeMesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReportesDeMesa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnNumero,
-            this.ColumnDescripcion,
-            this.ColumnEstado,
-            this.ColumnActivo});
-            this.dgvReportesDeMesa.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvReportesDeMesa.Location = new System.Drawing.Point(77, 26);
-            this.dgvReportesDeMesa.Name = "dgvReportesDeMesa";
-            this.dgvReportesDeMesa.RowHeadersWidth = 51;
-            this.dgvReportesDeMesa.Size = new System.Drawing.Size(555, 365);
-            this.dgvReportesDeMesa.StandardTab = true;
-            this.dgvReportesDeMesa.TabIndex = 0;
-            this.dgvReportesDeMesa.Text = "dataGridView1";
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.dgvReportesDeMesa);
@@ -201,6 +184,23 @@
             this.btnImprimir.TabIndex = 1;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
+            // 
+            // dgvReportesDeMesa
+            // 
+            this.dgvReportesDeMesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReportesDeMesa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumero,
+            this.ColumnDescripcion,
+            this.ColumnEstado,
+            this.ColumnActivo});
+            this.dgvReportesDeMesa.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dgvReportesDeMesa.Location = new System.Drawing.Point(77, 26);
+            this.dgvReportesDeMesa.Name = "dgvReportesDeMesa";
+            this.dgvReportesDeMesa.RowHeadersWidth = 51;
+            this.dgvReportesDeMesa.Size = new System.Drawing.Size(555, 365);
+            this.dgvReportesDeMesa.StandardTab = true;
+            this.dgvReportesDeMesa.TabIndex = 0;
+            this.dgvReportesDeMesa.Text = "dataGridView1";
             // 
             // ColumnNumero
             // 
@@ -244,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(821, 535);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReportesDeMesa";
@@ -251,8 +252,8 @@
             this.Text = "Reportes de Mesa";
             this.Load += new System.EventHandler(this.FormReportesDeMesa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeMesa)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeMesa)).EndInit();
             this.ResumeLayout(false);
 
         }

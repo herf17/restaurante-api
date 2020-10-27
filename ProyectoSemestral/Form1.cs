@@ -24,6 +24,7 @@ namespace ProyectoSemestral
             dataGridViewDetalle.Rows.Add("Pollo", 10, 2.0, 20.00);
             dataGridViewDetalle.Rows.Add("Tamal", 5, 1.75, 8.50);
             dataGridViewDetalle.Rows.Add("Papas fritas", 5, 1.00, 5.00);
+            dataGridViewDetalle.Rows.Add("Papas", 5, 1.00, 5.00);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
