@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CapaDeConexionCLS;
+
 namespace ProyectoSemestral
 {
     public partial class Form1 : Form
@@ -15,10 +17,14 @@ namespace ProyectoSemestral
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ConexionClS con = new ConexionClS();
+
+
             dataGridViewDetalle.Rows.Add("Soda", 2, 2.32, 10.23);
             dataGridViewDetalle.Rows.Add("Pizza", 2, 14.00, 28.00);
             dataGridViewDetalle.Rows.Add("Pollo", 10, 2.0, 20.00);
@@ -29,12 +35,13 @@ namespace ProyectoSemestral
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-           /**
-            foreach (row r  in dataGridViewDetalle.SelectedRows){
-                dataGridViewDetalle.Rows.Remove(row);
-            }
-            **/
-            
+            ConexionClS con = new ConexionClS();
+            /**
+             foreach (row r  in dataGridViewDetalle.SelectedRows){
+                 dataGridViewDetalle.Rows.Remove(row);
+             }
+             **/
+
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
