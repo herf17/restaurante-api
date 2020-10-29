@@ -1,0 +1,5 @@
+C:\Users\tesmi\source\Repos\ProyectoFinal\CapaDeConexionCLS\bin\Debug\netstandard2.0\CapaDeConexionCLS.deps.json
+C:\Users\tesmi\source\Repos\ProyectoFinal\CapaDeConexionCLS\bin\Debug\netstandard2.0\CapaDeConexionCLS.dll
+C:\Users\tesmi\source\Repos\ProyectoFinal\CapaDeConexionCLS\obj\Debug\netstandard2.0\CapaDeConexionCLS.csprojAssemblyReference.cache
+C:\Users\tesmi\source\Repos\ProyectoFinal\CapaDeConexionCLS\obj\Debug\netstandard2.0\CapaDeConexionCLS.AssemblyInfoInputs.cache
+C:\Users\tesmi\source\Repos\ProyectoFinal\CapaDeConexionCLS\obj\Debug\netstandard2.0\CapaDeConexionCLS.AssemblyInfo.cs
