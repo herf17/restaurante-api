@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CapaDeNegocioCLS
 {
-    class ReporteDeProductosCLS
+    class ReportesDeProductosCLS
     {
     }
 }

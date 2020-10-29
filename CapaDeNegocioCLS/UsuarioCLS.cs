@@ -102,8 +102,5 @@ namespace CapaDeNegocioCLS
 
             return this;
         }
-
-
-
     }
 }
