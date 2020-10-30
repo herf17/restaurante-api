@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
-using System.Xml.XPath;
-
 
 using CapaDeConexionCLS;
 
@@ -19,14 +18,13 @@ namespace CapaDeNegocioCLS
         public string fecha_adicion { get; set; }
         public string fecha_modificacion { get; set; }
 
-
         public string mensaje { get; set; }
-
 
         private ArrayList parametros = new ArrayList();
         private ArrayList valores = new ArrayList();
         private string sp_insert = "sp_insert_tbl_usuario";
         private string sp_update = "sp_update_tbl_usuario";
+        private string sp_select_uno = "sp_select_tbl_usuario_uno";
 
         private DataTable listado;
 
@@ -99,8 +97,37 @@ namespace CapaDeNegocioCLS
                 this.id_usuario = "0";
                 this.mensaje = con.mensajeError;
             }
-
             return this;
+        }
+
+        public List<UsuarioCLS> BuscaUsuario()
+        {
+            ConexionClS con = new ConexionClS();
+            parametros.Add("p_id_usuario");
+            valores.Add(this.id_usuario);
+
+            this.listado = con.Ejecutar("sp_select_uno", parametros, valores);
+
+            List<UsuarioCLS> lista = new List<UsuarioCLS>();
+
+            if (!con.isError)
+            {
+                foreach (DataRow row in this.listado.Rows)
+                {
+                    lista.Add(new UsuarioCLS
+                    {
+                        id_usuario = row["id_usuario"].ToString(),
+                        usuario = row["usuario"].ToString(),
+                        contrasenna = row["contrasenna"].ToString(),
+                        nombre = row["nombre"].ToString(),
+                        cargo = row["cargo"].ToString(),
+                        activo = row["activo"].ToString(),
+                        fecha_adicion = row["fecha_adicion"].ToString(),
+                        fecha_modificacion = row["fecha_modificacion"].ToString()
+                    });
+                }
+            }
+            return lista;
         }
     }
 }
