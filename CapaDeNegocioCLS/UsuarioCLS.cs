@@ -25,6 +25,8 @@ namespace CapaDeNegocioCLS
         private string sp_insert = "sp_insert_tbl_usuario";
         private string sp_update = "sp_update_tbl_usuario";
         private string sp_select_uno = "sp_select_tbl_usuario_uno";
+        private string sp_select_todos = "sp_select_tbl_usuario_todos";
+
 
         private DataTable listado;
 
