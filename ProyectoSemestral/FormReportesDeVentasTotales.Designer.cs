@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,15 +56,16 @@
             this.button1.Text = "Imprimir";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnBorrar
             // 
-            this.button2.BackColor = System.Drawing.Color.Orange;
-            this.button2.Location = new System.Drawing.Point(296, 431);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Borrar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBorrar.BackColor = System.Drawing.Color.Orange;
+            this.btnBorrar.Location = new System.Drawing.Point(296, 431);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(103, 39);
+            this.btnBorrar.TabIndex = 1;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = false;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -117,7 +118,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnImprimir);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnBorrar);
             this.groupBox1.Controls.Add(this.dgvReportesDeVentasTotales);
             this.groupBox1.Location = new System.Drawing.Point(111, 60);
             this.groupBox1.Name = "groupBox1";
@@ -194,7 +195,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

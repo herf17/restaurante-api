@@ -28,5 +28,10 @@ namespace ProyectoSemestral
             dgvReportesDeVentasTotales.Rows.Add(4, 112.75,"12-2-2020");
             dgvReportesDeVentasTotales.Rows.Add(5, 70.00, "12-2-2020");
         }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
