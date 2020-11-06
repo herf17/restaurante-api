@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> e160e012582860f608f24d5a7a072acde6e78558
 CapaDeConexionCLS/bin/Debug/netstandard2.0/CapaDeConexionCLS.dll
 CapaDeConexionCLS/bin/Debug/netstandard2.0/CapaDeConexionCLS.pdb
 CapaDeConexionCLS/obj/Debug/netstandard2.0/CapaDeConexionCLS.csproj.CoreCompileInputs.cache
@@ -7,6 +10,49 @@ CapaDeConexionCLS/obj/Debug/netstandard2.0/CapaDeConexionCLS.pdb
 CapaDeNegocioCLS/CapaDeNegocioCLS.csproj
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.AssemblyInfo.cs
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.AssemblyInfoInputs.cache
+<<<<<<< HEAD
+=======
+Proyecto/clsNegocios/obj/clsNegocios.csproj.nuget.dgspec.json
+Proyecto/clsNegocios/obj/clsNegocios.csproj.nuget.g.props
+Proyecto/clsNegocios/obj/clsNegocios.csproj.nuget.g.targets
+Proyecto/clsNegocios/obj/project.assets.json
+Proyecto/clsNegocios/obj/project.nuget.cache
+Proyecto/clsNegocios/obj/Debug/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.cs
+Proyecto/clsNegocios/obj/Debug/netstandard2.0/clsNegocios.AssemblyInfo.cs
+Proyecto/clsNegocios/obj/Debug/netstandard2.0/clsNegocios.AssemblyInfoInputs.cache
+Proyecto/clsNegocios/obj/Debug/netstandard2.0/clsNegocios.assets.cache
+Proyecto/clsNegocios/obj/Debug/netstandard2.0/clsNegocios.csprojAssemblyReference.cache
+Proyecto/ConexionSql/obj/ConexionSql.csproj.nuget.dgspec.json
+Proyecto/ConexionSql/obj/ConexionSql.csproj.nuget.g.props
+Proyecto/ConexionSql/obj/ConexionSql.csproj.nuget.g.targets
+Proyecto/ConexionSql/obj/project.assets.json
+Proyecto/ConexionSql/obj/project.nuget.cache
+Proyecto/ConexionSql/obj/Debug/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.cs
+Proyecto/ConexionSql/obj/Debug/netstandard2.0/ConexionSql.AssemblyInfo.cs
+Proyecto/ConexionSql/obj/Debug/netstandard2.0/ConexionSql.AssemblyInfoInputs.cache
+Proyecto/ConexionSql/obj/Debug/netstandard2.0/ConexionSql.assets.cache
+Proyecto/ConexionSql/obj/Debug/netstandard2.0/ConexionSql.csprojAssemblyReference.cache
+Proyecto/Pruebasddl/obj/project.assets.json
+Proyecto/Pruebasddl/obj/project.nuget.cache
+Proyecto/Pruebasddl/obj/Pruebasddl.csproj.nuget.dgspec.json
+Proyecto/Pruebasddl/obj/Pruebasddl.csproj.nuget.g.props
+Proyecto/Pruebasddl/obj/Pruebasddl.csproj.nuget.g.targets
+Proyecto/Pruebasddl/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+Proyecto/Pruebasddl/obj/Debug/netcoreapp3.1/Pruebasddl.AssemblyInfo.cs
+Proyecto/Pruebasddl/obj/Debug/netcoreapp3.1/Pruebasddl.AssemblyInfoInputs.cache
+Proyecto/Pruebasddl/obj/Debug/netcoreapp3.1/Pruebasddl.assets.cache
+Proyecto/Pruebasddl/obj/Debug/netcoreapp3.1/Pruebasddl.csprojAssemblyReference.cache
+Proyecto/WindowsFormsApp2/obj/Parcial1.csproj.nuget.dgspec.json
+Proyecto/WindowsFormsApp2/obj/Parcial1.csproj.nuget.g.props
+Proyecto/WindowsFormsApp2/obj/Parcial1.csproj.nuget.g.targets
+Proyecto/WindowsFormsApp2/obj/project.assets.json
+Proyecto/WindowsFormsApp2/obj/project.nuget.cache
+Proyecto/WindowsFormsApp2/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+Proyecto/WindowsFormsApp2/obj/Debug/netcoreapp3.1/Parcial1.AssemblyInfo.cs
+Proyecto/WindowsFormsApp2/obj/Debug/netcoreapp3.1/Parcial1.AssemblyInfoInputs.cache
+Proyecto/WindowsFormsApp2/obj/Debug/netcoreapp3.1/Parcial1.assets.cache
+Proyecto/WindowsFormsApp2/obj/Debug/netcoreapp3.1/Parcial1.csprojAssemblyReference.cache
+>>>>>>> e160e012582860f608f24d5a7a072acde6e78558
 CapaDeNegocioCLS/obj/CapaDeNegocioCLS.csproj.nuget.dgspec.json
 CapaDeNegocioCLS/obj/CapaDeNegocioCLS.csproj.nuget.g.props
 CapaDeNegocioCLS/obj/CapaDeNegocioCLS.csproj.nuget.g.targets
@@ -14,6 +60,12 @@ CapaDeNegocioCLS/obj/project.assets.json
 CapaDeNegocioCLS/obj/project.nuget.cache
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.cs
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.assets.cache
+<<<<<<< HEAD
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csprojAssemblyReference.cache
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csproj.CoreCompileInputs.cache
 CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csproj.FileListAbsolute.txt
+=======
+CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csproj.CoreCompileInputs.cache
+CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csproj.FileListAbsolute.txt
+CapaDeNegocioCLS/obj/Debug/netstandard2.0/CapaDeNegocioCLS.csprojAssemblyReference.cache
+>>>>>>> e160e012582860f608f24d5a7a072acde6e78558
