@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xxJmNYplsUUtalakrtHGhq0qX3zsXL5xEi7I9Gybwpc3leW/5M+4nQ0x8z7ILBUJDTe/Wmzr8CC+JhNdcXN4CQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marilyn\\Desktop\\proyecto DS8\\Guias\\1\\ConexionMysql\\ConexionMysql\\ConexionMysql.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marilyn\\.nuget\\packages\\mysqlconnector\\1.0.1\\mysqlconnector.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
