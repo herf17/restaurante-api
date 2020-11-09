@@ -1,19 +1,16 @@
 
 /////
-select * from Parametros
-select * from ParametrosCategorias
+select * from tbl_usuario
+select * from tbl_tipoUsuario
 
-select par.IdParametroSec,
-		par.IdParametro,
-		par.IdParametroCategoria,
-		par.Descripcion,
-		par.Valor,
-		tipo.IdParametroCategoria,
-		tipo.Descripcion
+seleect user.idUsuario,
+		user.IdTipoUsuario,
+		user.nombre,
+		user.activo,
+		tipoUser.IdTipoUsuario,
+		tipoUser.Descripcion
 		
- from Parametros par
- join ParametrosCategorias tipo
+ from tbl_usuario user
+ join tbl_tipoUsuario tipoUser
 		
- on tipo.IdParametroCategoria = par.IdParametroCategoria 
-
-ObjetivoHipoteca
+ on tipoUser.IdTipoUsuario = user.idUsuario 
