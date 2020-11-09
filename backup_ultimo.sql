@@ -170,7 +170,8 @@ BEGIN
 	SELECT 
 		id_producto, 
 		descripcion, 
-		preciorestaurante
+		precio,
+    activo
 	FROM
 		tbl_producto
 	WHERE id_categoria =id_categ AND activo = "1";    
