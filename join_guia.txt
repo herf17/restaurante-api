@@ -1,0 +1,19 @@
+
+/////
+select * from Parametros
+select * from ParametrosCategorias
+
+select par.IdParametroSec,
+		par.IdParametro,
+		par.IdParametroCategoria,
+		par.Descripcion,
+		par.Valor,
+		tipo.IdParametroCategoria,
+		tipo.Descripcion
+		
+ from Parametros par
+ join ParametrosCategorias tipo
+		
+ on tipo.IdParametroCategoria = par.IdParametroCategoria 
+
+ObjetivoHipoteca
