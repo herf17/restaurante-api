@@ -20,7 +20,7 @@ namespace clsNegocios
 
         public List<clsProductos> ProductoEnCatg(string id)
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             param.Add("id_categ");
             campos.Add(id);
             this.producEnCatg = conexion.proceder(pa_CatgProduc, param, campos);
