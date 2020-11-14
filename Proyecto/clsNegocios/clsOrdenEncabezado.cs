@@ -4,7 +4,7 @@ using System.Text;
 
 namespace clsNegocios
 {
-    class clsOrdenEncabezado
+    public class clsOrdenEncabezado
     {
         public string id_orden { get; set; }
         public string fecha_orden { get; set; }

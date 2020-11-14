@@ -4,7 +4,15 @@ using System.Text;
 
 namespace clsNegocios
 {
-    class clsUsuario
+    public class clsUsuario
     {
+        public string id_usuario { get; set; }
+        public string usuario { get; set; }
+        public string contrasenna { get; set; }
+        public string nombre { get; set; }
+        public string cargo { get; set; }
+        public string activo { get; set; }
+        public string fecha_adicion { get; set; }
+        public string fecha_modificacion { get; set; }
     }
 }
