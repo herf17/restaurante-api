@@ -20,7 +20,7 @@ namespace clsNegocios
 
         public List<clsMesas> buscaMesas()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             this.mesas = conexion.proceder(pa_buscaMesa, param, campos);
             List<clsMesas> lista = new List<clsMesas>();
             if (!conexion.error)
