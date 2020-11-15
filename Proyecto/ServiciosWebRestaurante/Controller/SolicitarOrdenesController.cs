@@ -24,5 +24,28 @@ namespace ServiciosWebRestaurante.Controller
             else
                 return Ok(todos);
         }
+
+        public void NuevaOrden()
+        {
+            try
+            {
+                clsOrdenEncabezado obj = new clsOrdenEncabezado();
+                string i = obj.IdParaNuevaOrden("50.99", "3", "2", "3");
+                //ciclo que insertara el arreglo de los productos en la orden
+                for (int j = 6; j < 8; j++)
+                {
+                    clsOrdenDetalle obj2 = new clsOrdenDetalle();
+                    obj2.insertarDetalleOrden(i, j.ToString(), j.ToString(), j.ToString(), j.ToString());
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+            }
+
+
+        }
     }
 }
