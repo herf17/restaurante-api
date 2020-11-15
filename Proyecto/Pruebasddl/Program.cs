@@ -26,10 +26,10 @@ namespace Pruebasddl
                 clsOrdenEncabezado obj = new clsOrdenEncabezado();
                 
                 string i = obj.IdParaNuevaOrden("50.99", "3", "2", "3");
-                for (int j = 6; j < 8; j++)
+                for (int j = 1; j < 4; j++)
                 {
                     clsOrdenDetalle obj2 = new clsOrdenDetalle();
-                    obj2.insertarDetalleOrden(i, j.ToString(), j.ToString(), j.ToString(), j.ToString());
+                    obj2.insertarDetalleOrden(i, j.ToString(), j.ToString(), j.ToString(), "25.99");
                 }
                     
 
