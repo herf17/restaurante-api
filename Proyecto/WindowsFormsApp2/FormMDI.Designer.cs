@@ -142,6 +142,7 @@
             this.dataGridViewDetalle.Size = new System.Drawing.Size(633, 365);
             this.dataGridViewDetalle.TabIndex = 0;
             this.dataGridViewDetalle.Text = "dataGridView1";
+            this.dataGridViewDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDetalle_CellContentClick);
             // 
             // desProducto
             // 

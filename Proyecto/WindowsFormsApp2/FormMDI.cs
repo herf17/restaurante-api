@@ -94,5 +94,10 @@ namespace ProyectoSemestral
             FormReportesDeOrdenes frmRDO = new FormReportesDeOrdenes();
             frmRDO.Show();
         }
+
+        private void dataGridViewDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

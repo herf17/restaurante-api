@@ -8,7 +8,7 @@ using System.Data;
 
 namespace clsNegocios
 {
-    class ReportesDeProductosMasVendidosCLS
+    public class ReportesDeProductosMasVendidosCLS
     {
     }
 }
