@@ -25,24 +25,31 @@ namespace ServiciosWebRestaurante.Controller
                 return Ok(todos);
         }
 
-        public void NuevaOrden()
+        [HttpPost]
+        [Route("nuevaorden")]
+        public IActionResult NuevaOrden([FromBody]Model.clsAgregarOrdenModel  nuevo)
         {
+            List<Model.clsProducOrden> pasto = new List<Model.clsProducOrden>();
+            pasto = nuevo.productos;
+            
             try
             {
                 clsOrdenEncabezado obj = new clsOrdenEncabezado();
-                string i = obj.IdParaNuevaOrden("50.99", "3", "2", "3");
+                string i = obj.IdParaNuevaOrden(nuevo.total, nuevo.iduser, nuevo.mesa, nuevo.idclient);
                 //ciclo que insertara el arreglo de los productos en la orden
-                for (int j = 1; j < 4; j++)
+                for (int j = 0; j < pasto.Count; j++)
                 {
                     clsOrdenDetalle obj2 = new clsOrdenDetalle();
-                    obj2.insertarDetalleOrden(i, j.ToString(), j.ToString(), j.ToString(), "24.99");
+                    obj2.insertarDetalleOrden(i, pasto[j].idproduct, pasto[j].cantidades, pasto[j].preciosss, pasto[j].totality);
                 }
-
-
+                if (pasto.Count == 0)
+                    return NotFound(pasto);
+                else
+                    return Ok(i);
             }
             catch (Exception e)
             {
-
+                return NotFound(pasto);
             }
 
 
