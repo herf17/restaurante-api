@@ -19,19 +19,31 @@ namespace ServiciosWebRestaurante.Controller
             clsMesas mesas = new clsMesas();
             List<clsMesas> todos = new List<clsMesas>();
             todos = mesas.buscaMesas();
+
             if (todos.Count == 0)
                 return NotFound(todos);
             else
                 return Ok(todos);
         }
+        [HttpPost]
+        [Route("puntscl")]
+        public IActionResult points([FromBody] clsCliente cod)
+        {
+            clsCliente cliente = new clsCliente();
+            cliente = new clsCliente().comprobarPuntos(cod.id_cliente);
+            if (cliente.mensaje == "0")
+                return NotFound(cliente);
+            else
+                return Ok(cliente);
+        }
 
         [HttpPost]
         [Route("nuevaorden")]
-        public IActionResult NuevaOrden([FromBody]Model.clsAgregarOrdenModel  nuevo)
+        public IActionResult NuevaOrden([FromBody] Model.clsAgregarOrdenModel nuevo)
         {
             List<Model.clsProducOrden> pasto = new List<Model.clsProducOrden>();
             pasto = nuevo.productos;
-            
+
             try
             {
                 clsOrdenEncabezado obj = new clsOrdenEncabezado();
@@ -51,8 +63,40 @@ namespace ServiciosWebRestaurante.Controller
             {
                 return NotFound(pasto);
             }
-
-
         }
+        [HttpPost]
+        [Route("anular")]
+        public IActionResult denegarOrden([FromBody] clsOrdenEncabezado id)
+        {
+            clsOrdenEncabezado ord = new clsOrdenEncabezado();
+            string estadoAnular = ord.cancelarOrden(id.id_orden);
+                if (estadoAnular != "ok")
+                    return NotFound(estadoAnular);
+                else
+                    return Ok(estadoAnular);
+        }
+        [HttpPost]
+        [Route("ordenterminar")]
+        public IActionResult terminarOrden([FromBody] clsOrdenEncabezado id)
+        {
+                clsOrdenEncabezado ord = new clsOrdenEncabezado();
+                string estadoAnular = ord.endOrden(id.id_orden);
+                if (estadoAnular != "ok")
+                    return NotFound(estadoAnular);
+                else
+                    return Ok(estadoAnular);
+        }
+        [HttpPost]
+        [Route("estadococina")]
+        public IActionResult cambioEstadoOrdenCocina([FromBody] clsOrdenEncabezado id)
+        {
+            clsOrdenEncabezado ord = new clsOrdenEncabezado();
+            string estadoAnular = ord.cambioestado(id.numero_mesa);
+            if (estadoAnular != "ok")
+                return NotFound(estadoAnular);
+            else
+                return Ok(estadoAnular);
+        }
+
     }
 }
