@@ -20,7 +20,7 @@ namespace clsNegocios
 
         public List<clsCategorias> OrdenConCatg()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             this.catgEnOrdenes = conexion.proceder(pa_OrdenCatg, param, campos);
             List<clsCategorias> lista = new List<clsCategorias>();
             if (!conexion.error)
