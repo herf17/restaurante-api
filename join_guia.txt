@@ -1,0 +1,16 @@
+
+/////
+select * from tbl_usuario
+select * from tbl_tipoUsuario
+
+seleect user.idUsuario,
+		user.IdTipoUsuario,
+		user.nombre,
+		user.activo,
+		tipoUser.IdTipoUsuario,
+		tipoUser.Descripcion
+		
+ from tbl_usuario user
+ join tbl_tipoUsuario tipoUser
+		
+ on tipoUser.IdTipoUsuario = user.idUsuario 
