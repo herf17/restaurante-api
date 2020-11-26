@@ -34,8 +34,8 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvReportesDeOrdenes = new System.Windows.Forms.DataGridView();
             this.btnImprimir = new System.Windows.Forms.Button();
+            this.dgvReportesDeOrdenes = new System.Windows.Forms.DataGridView();
             this.ColumnIdOrden = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnFechaHora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +43,8 @@
             this.ColumnNumeroDeMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeOrdenes)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeOrdenes)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -95,6 +95,25 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnImprimir);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.dgvReportesDeOrdenes);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1046, 494);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnImprimir.Location = new System.Drawing.Point(616, 431);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(103, 39);
+            this.btnImprimir.TabIndex = 1;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // dgvReportesDeOrdenes
             // 
@@ -113,24 +132,6 @@
             this.dgvReportesDeOrdenes.Size = new System.Drawing.Size(954, 358);
             this.dgvReportesDeOrdenes.TabIndex = 0;
             this.dgvReportesDeOrdenes.Text = "dataGridView1";
-            this.groupBox1.Controls.Add(this.btnImprimir);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dgvReportesDeOrdenes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1046, 494);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnImprimir.Location = new System.Drawing.Point(616, 431);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(103, 39);
-            this.btnImprimir.TabIndex = 1;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // ColumnIdOrden
             // 
@@ -207,8 +208,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reportes De Ordenes";
             this.Load += new System.EventHandler(this.FormReportesDeOrdenes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeOrdenes)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReportesDeOrdenes)).EndInit();
             this.ResumeLayout(false);
 
         }

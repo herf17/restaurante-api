@@ -1,77 +1,3 @@
-<<<<<<< HEAD:backup_ultimo.sql
-
-CREATE TABLE `tbl_usuario` (
-  `id_usuario` INT(3) NOT NULL,
-  `usuario` VARCHAR(100) NOT NULL,
-  `contrasena` VARCHAR(100) NOT NULL,
-  `nombre` VARCHAR(100) NOT NULL,
-  `cargo` VARCHAR(100) NOT NULL,
-  `activo` VARCHAR(100) NOT NULL,
-  `id_tipo` INT NOT NULL,
-  PRIMARY KEY (`id_usuario`),
-  KEY `fk_usuario_tipo_idx` (`id_tipo`),
-  CONSTRAINT `fk_usuario_tipo` FOREIGN KEY (`id_tipo`) REFERENCES `tbl_tipo_de_usuario` (`id`)
-) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `tbl_tipo_de_usuario`(
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES `tbl_tipo_de_usuario` WRITE;
-INSERT INTO `tbl_tipo_de_usuario` VALUES (1,'Administrador'),(2,'Usuario');
-UNLOCK TABLES;
-
-INSERT INTO `tbl_usuario` (`id_usuario`, `usuario`, `contrasena`, `nombre`, `cargo`, `activo`) VALUES
-(1, 'marilyn', '123' , 'Marilyn', 'programador', 'si'),
-(2, 'cristal', '1234' , 'Cristal', 'programador', 'si');
-
-ALTER TABLE `tbl_usuario`
-  ADD PRIMARY KEY (`id_usuario`);
-  
-  ALTER TABLE `tbl_usuario`
-  MODIFY `id_usuario` INT(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
-SELECT * FROM tbl_tipo_de_usuario
-CREATE TABLE `tbl_usuario` (
-  `id_usuario` INT(3) NOT NULL,
-  `usuario` VARCHAR(100) NOT NULL,
-  `contrasena` VARCHAR(100) NOT NULL,
-  `nombre` VARCHAR(100) NOT NULL,
-  `cargo` VARCHAR(100) NOT NULL,
-  `activo` VARCHAR(100) NOT NULL,
-  `id_tipo` INT NOT NULL,
-  PRIMARY KEY (`id_usuario`),
-  KEY `fk_usuario_tipo_idx` (`id_tipo`),
-  CONSTRAINT `fk_usuario_tipo` FOREIGN KEY (`id_tipo`) REFERENCES `tbl_tipo_usuario` (`id`)
-) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE `tbl_tipo_de_usuario`(
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES `tbl_tipo_usuario` WRITE;
-INSERT INTO `tbl_tipo_usuario` VALUES (1,'Administrador'),(2,'Usuario');
-UNLOCK TABLES;
-
-INSERT INTO `tbl_usuario` (`id_usuario`, `usuario`, `contrasena`, `nombre`, `cargo`, `activo`) VALUES
-(1, 'marilyn', '123' , 'Marilyn', 'programador', 'si'),
-(2, 'cristal', '1234' , 'Cristal', 'programador', 'si');
-
-ALTER TABLE `tbl_usuario`
-  ADD PRIMARY KEY (`id_usuario`);
-  
-  ALTER TABLE `tbl_usuario`
-  MODIFY `id_usuario` INT(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
-SELECT * FROM tbl_tipo_usuario
-
-
-DROP TABLE tbl_tipo_de_usuario
-=======
 /*
 SQLyog Community v13.1.7 (64 bit)
 MySQL - 5.7.24 : Database - restaurante
@@ -174,14 +100,16 @@ CREATE TABLE `tbl_orden_encabezado` (
   `fecha_hora` varchar(10) NOT NULL,
   `total` varchar(50) NOT NULL,
   `id_usuario` int(3) NOT NULL,
-  `numero_mesa` varchar(3) NOT NULL,
+  `numero_mesa` bigint(20) NOT NULL,
   `id_cliente` bigint(11) NOT NULL,
   `estado` varchar(50) NOT NULL,
   PRIMARY KEY (`id_orden`),
   KEY `id_cliente` (`id_cliente`,`id_usuario`),
   KEY `FK_tbl_orden_encabezado_tbl_usuario` (`id_usuario`),
+  KEY `numero_mesa` (`numero_mesa`),
   CONSTRAINT `FK_tbl_orden_encabezado_tbl_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `tbl_cliente` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_tbl_orden_encabezado_tbl_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `FK_tbl_orden_encabezado_tbl_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `tbl_usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_tbl_orden_encabezado_tbl_mesa` FOREIGN KEY (`numero_mesa`) REFERENCES `tbl_mesa` (`numero`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `tbl_orden_encabezado` */
@@ -196,6 +124,7 @@ CREATE TABLE `tbl_producto` (
   `precio` varchar(20) NOT NULL,
   `id_categoria` bigint(20) NOT NULL,
   `activo` varchar(1) NOT NULL DEFAULT '1',
+  `cantidad` int(100) NOT NULL,
   PRIMARY KEY (`id_producto`),
   KEY `FK_tbl_producto_tbl_categoria` (`id_categoria`),
   CONSTRAINT `FK_tbl_producto_tbl_categoria` FOREIGN KEY (`id_categoria`) REFERENCES `tbl_categoria` (`id_categoria`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -203,15 +132,15 @@ CREATE TABLE `tbl_producto` (
 
 /*Data for the table `tbl_producto` */
 
-insert  into `tbl_producto`(`id_producto`,`descripcion`,`precio`,`id_categoria`,`activo`) values 
-(1,'Sancocho','3.99',1,'1'),
-(2,'Caldo de pollo','3.99',1,'1'),
-(3,'Sopa de carne','3.99',1,'1'),
-(4,'Gaseosa','1.00',2,'1'),
-(5,'BBQ Grill','0.80',3,'1'),
-(6,'Chuleta','4.50',3,'1'),
-(7,'Pollo Asado','4.00',3,'1'),
-(8,'Costillas','8.00',3,'0');
+insert  into `tbl_producto`(`id_producto`,`descripcion`,`precio`,`id_categoria`,`activo`,`cantidad`) values 
+(1,'Sancocho','3.99',1,'1',0),
+(2,'Caldo de pollo','3.99',1,'1',0),
+(3,'Sopa de carne','3.99',1,'1',0),
+(4,'Gaseosa','1.00',2,'1',0),
+(5,'BBQ Grill','0.80',3,'1',0),
+(6,'Chuleta','4.50',3,'1',0),
+(7,'Pollo Asado','4.00',3,'1',0),
+(8,'Costillas','8.00',3,'0',0);
 
 /*Table structure for table `tbl_usuario` */
 
@@ -237,15 +166,12 @@ CREATE TABLE `tbl_usuario` (
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `pa_select_catg_prod`(
-			IN id_categ VARCHAR(20)
-)
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `pa_select_catg_prod`(IN `id_categ` VARCHAR(20))
 BEGIN
 	SELECT 
 		id_producto, 
 		descripcion, 
-		precio,
-    activo
+		precio
 	FROM
 		tbl_producto
 	WHERE id_categoria =id_categ AND activo = "1";    
@@ -317,8 +243,87 @@ INSERT INTO `tbl_categoria` ( `nombre`, `imagen`, `activo`)
 VALUES(`p_nombre`,`p_imagen`,`p_activo`) */$$
 DELIMITER ;
 
+/* Procedure structure for procedure `sp_select_reporte_de_mesa` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_select_reporte_de_mesa` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_reporte_de_mesa`()
+BEGIN
+		SELECT numero, descripcion, estado, activo FROM tbl_mesa WHERE activo = 1;  
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_select_reporte_de_ordenes` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_select_reporte_de_ordenes` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_reporte_de_ordenes`()
+BEGIN
+		SELECT orden.id_orden,
+		orden.fecha_hora,
+		orden.total,
+		usuario.nombre,
+		mesa.numero,
+		clie.nombre,
+		orden.estado,
+	
+		clie.apellido
+		
+		
+		FROM tbl_orden_encabezado orden
+		JOIN tbl_mesa mesa
+		JOIN tbl_cliente clie
+		JOIN tbl_usuario usuario
+				
+		ON mesa.numero = orden.numero_mesa;
+		# ON clie.id_cliente = orden.id_cliente
+		# ON usuario.id_usuario = orden.id_usuario
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_select_reporte_de_producto` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_select_reporte_de_producto` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_reporte_de_producto`()
+BEGIN
+		SELECT prod.id_producto,
+		prod.descripcion,
+		prod.precio,
+		prod.id_categoria,
+		prod.activo,
+		prod.cantidad,
+		
+		cate.id_categoria,
+		cate.nombre
+		
+		FROM tbl_producto prod
+		JOIN tbl_categoria cate
+				
+		ON cate.id_categoria = prod.id_producto; 
+  
+	END */$$
+DELIMITER ;
+
+/* Procedure structure for procedure `sp_select_reporte_de_ventas` */
+
+/*!50003 DROP PROCEDURE IF EXISTS  `sp_select_reporte_de_ventas` */;
+
+DELIMITER $$
+
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_reporte_de_ventas`()
+BEGIN
+		SELECT id_orden, cantidad, total FROM tbl_orden_detalle; 
+	END */$$
+DELIMITER ;
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
->>>>>>> 0ff3f078e9fb7cd6ae2020710c036abffa015d9a:Proyecto/Basededatos/backup_ultimo.sql
