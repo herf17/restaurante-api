@@ -135,11 +135,11 @@ namespace clsNegocios
                 {
                     lista.Add(new clsCliente
                     {
-                        id_cliente = row["id_cliente"].ToString(),
-                        nombre = row["nombre"].ToString(),
-                        apellido = row["apellido"].ToString(),
+                        id_cliente    = row["id_cliente"].ToString(),
+                        nombre        = row["nombre"].ToString(),
+                        apellido      = row["apellido"].ToString(),
                         ultima_compra = row["ultima_compra"].ToString(),
-                        puntos = row["puntos"].ToString()
+                        puntos        = row["puntos"].ToString()
                     });
                 }
             return lista;
@@ -158,11 +158,11 @@ namespace clsNegocios
                 {
                     lista.Add(new clsCliente
                     {
-                        id_cliente = row["id_cliente"].ToString(),
-                        nombre = row["nombre"].ToString(),
-                        apellido = row["apellido"].ToString(),
+                        id_cliente    = row["id_cliente"].ToString(),
+                        nombre        = row["nombre"].ToString(),
+                        apellido      = row["apellido"].ToString(),
                         ultima_compra = row["ultima_compra"].ToString(),
-                        puntos = row["puntos"].ToString()
+                        puntos        = row["puntos"].ToString()
                     });
                
                 }

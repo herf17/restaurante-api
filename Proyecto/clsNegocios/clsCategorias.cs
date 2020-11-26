@@ -21,10 +21,10 @@ namespace clsNegocios
         private DataTable catgEnOrdenes;
 
         // variales para procedimientos almacenados de la Tabla Categoria -- CRUD de Mantenimiento 
-        private string sp_tbl_categoria_insert = "sp_tbl_categoria_insert";
-        private string sp_tbl_categoria_update = "sp_tbl_categoria_update";
+        private string sp_tbl_categoria_insert     = "sp_tbl_categoria_insert";
+        private string sp_tbl_categoria_update     = "sp_tbl_categoria_update";
         private string sp_tbl_categoria_select_uno = "sp_tbl_categoria_select_uno";
-        private string sp_tbl_categoria_select = "sp_tbl_categoria_select";
+        private string sp_tbl_categoria_select     = "sp_tbl_categoria_select";
 
         private DataTable listado;
 
@@ -67,13 +67,13 @@ namespace clsNegocios
                 foreach (DataRow row in this.listado.Rows)
                 {
                     this.id_categoria = row["id_categoria"].ToString();
-                    this.mensaje = "OK";
+                    this.mensaje      = "OK";
                 }
             }
             else
             {
                 this.id_categoria = "0";
-                this.mensaje = con.MensjError;
+                this.mensaje      = con.MensjError;
             }
 
             return this;
@@ -98,14 +98,15 @@ namespace clsNegocios
             {
                 foreach (DataRow row in this.listado.Rows)
                 {
-                    this.id_categoria = row["id_categoria"].ToString();
-                    this.mensaje = "OK";
+                    
+                    this.id_categoria = row["actualizado"].ToString();
+                    this.mensaje      = "OK";
                 }
             }
             else
             {
                 this.id_categoria = "0";
-                this.mensaje = con.MensjError;
+                this.mensaje      = con.MensjError;
             }
 
             return this;
@@ -148,9 +149,9 @@ namespace clsNegocios
                     lista.Add(new clsCategorias
                     {
                         id_categoria = row["id_categoria"].ToString(),
-                        nombre = row["nombre"].ToString(),
-                        imagen = row["imagen"].ToString(),
-                        activo = row["activo"].ToString()
+                        nombre       = row["nombre"].ToString(),
+                        imagen       = row["imagen"].ToString(),
+                        activo       = row["activo"].ToString()
                     });
 
                 }
