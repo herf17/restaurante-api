@@ -23,5 +23,10 @@ namespace ProyectoSemestral
             dgvReportesDeOrdenes.Rows.Add(4, "Tamal", 5, 1.75, 8.50);
             dgvReportesDeOrdenes.Rows.Add(5, "Papas fritas", 5, 1.00, 5.00);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

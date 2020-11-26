@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using CapaDeConexionCLS;
+
 
 namespace ProyectoSemestral
 {
@@ -22,7 +22,7 @@ namespace ProyectoSemestral
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConexionClS con = new ConexionClS();
+            //ConexionClS con = new ConexionClS();
 
 
             dataGridViewDetalle.Rows.Add("Soda", 2, 2.32, 10.23);
@@ -35,7 +35,7 @@ namespace ProyectoSemestral
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            ConexionClS con = new ConexionClS();
+            //ConexionClS con = new ConexionClS();
             /**
              foreach (row r  in dataGridViewDetalle.SelectedRows){
                  dataGridViewDetalle.Rows.Remove(row);
