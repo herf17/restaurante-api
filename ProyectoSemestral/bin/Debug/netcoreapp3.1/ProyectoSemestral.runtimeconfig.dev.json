@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\tesmi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\tesmi\\.nuget\\packages"
-    ]
-  }
-}

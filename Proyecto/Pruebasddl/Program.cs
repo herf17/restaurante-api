@@ -18,7 +18,11 @@ namespace Pruebasddl
             List<clsProductos> productos = new List<clsProductos>();
             //mesass = cmesas.buscaMesas();
             //categorias = ccatg.OrdenConCatg();
-            //productos = cprod.ProductoEnCatg("1");
+           //productos = cprod.ProductoEnCatg("1");
+
+            categorias = ccatg.TodosCategorias();
+            categorias = ccatg.BuscarCategorias();
+
 
             ReportesDeMesaCLS reporteMesa = new ReportesDeMesaCLS();
             List<ReportesDeMesaCLS> listaMesa = new List<ReportesDeMesaCLS>();

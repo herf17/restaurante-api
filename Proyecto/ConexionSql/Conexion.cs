@@ -17,7 +17,7 @@ namespace ConexionSql
             this.error = false;
             try
             {
-                con = new MySqlConnection("server=localhost;user=root;password=1234;database=restaurante");
+                con = new MySqlConnection("server=MYSQL5034.site4now.net;user=a6aba0_herf;password=1qaz2wsx;database=db_a6aba0_herf");
             }
             catch (Exception ex)
             {
