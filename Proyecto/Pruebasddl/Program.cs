@@ -33,6 +33,9 @@ namespace Pruebasddl
             List<ReportesDeProductosCLS> listaProductos = new List<ReportesDeProductosCLS>();
             listaProductos = reporteProductos.ReporteProducto();
 
+            clsUsuario clsUsuario = new clsUsuario();
+            List<clsUsuario> listaUsuario = new List<clsUsuario>();
+            listaUsuario = clsUsuario.TodosUsuarios();
 
         }
     }
