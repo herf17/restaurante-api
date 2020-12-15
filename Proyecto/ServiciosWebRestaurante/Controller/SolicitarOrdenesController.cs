@@ -98,5 +98,33 @@ namespace ServiciosWebRestaurante.Controller
                 return Ok(estadoAnular);
         }
 
+        [HttpPost]
+        [Route("categorias")]
+        public IActionResult solicitarCategorias()
+        {
+            clsCategorias categ = new clsCategorias();
+            List<clsCategorias> todos = new List<clsCategorias>();
+            todos = categ.OrdenConCatg();
+
+            if (todos.Count == 0)
+                return NotFound(todos);
+            else
+                return Ok(todos);
+        }
+
+        [HttpPost]
+        [Route("productoscatg")]
+        public IActionResult solicitarProdCatg([FromBody] clsProductos productos)
+        {
+            clsProductos prod = new clsProductos();
+            List<clsProductos> todos = new List<clsProductos>();
+            todos = prod.ProductoEnCatg(productos.id_categoria);
+
+            if (todos.Count == 0)
+                return NotFound(todos);
+            else
+                return Ok(todos);
+        }
+
     }
 }

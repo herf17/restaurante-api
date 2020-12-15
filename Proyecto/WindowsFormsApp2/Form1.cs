@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
+        private String urlcatgcont = "solicitarordenes/categorias";
+        private String urlprodgcont = "solicitarordenes/productoscatg";
+        private String coman = null;
+        List<Model.CategModel> listaCatg;
+        List<Model.ProdEnCatgModel> prodCatg;
         public Form1()
         {
             InitializeComponent();
@@ -20,55 +27,21 @@ namespace WindowsFormsApp2
         private void cargaboto()
         {
             //Carga categoria 1 entrada
-            for (int n = 0; n < 10; n++)
+            ApiBase apbase = new ApiBase();
+            IRestResponse respuesta = apbase.execApi(urlcatgcont, coman);
+            listaCatg = JsonConvert.DeserializeObject<List<Model.CategModel>>(respuesta.Content);
+
+            for (int i = 0; i < listaCatg.Count; i++)
             {
                 Button botonCat = new Button();
-                botonCat.Name = "Entrada" + n.ToString();
-                botonCat.Text = "Entreda #" + n.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                botonCat.Click += new EventHandler(clickMesa);
-                flpCentra.Controls.Add(botonCat);
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Button botonCat = new Button();
-                botonCat.Name = "btncat" + i.ToString();
-                botonCat.Text = "categoria" + i.ToString();
+                botonCat.Name = "btncat" + i;
+                botonCat.Text = listaCatg[i].nombre;
                 botonCat.Width = 90;
                 botonCat.Height = 80;
                 flpCplatosfue.Controls.Add(botonCat);
-            }
-            for (int j = 0; j < 30; j++)
-            {
-                Button botonPro = new Button();
-                botonPro.Name = "btnprod" + j.ToString();
-                botonPro.Text = "producto #" + j.ToString();
-                botonPro.Height = 100;
-                botonPro.Width = 100;
-                botonPro.Click += new EventHandler(clickProducto);
-                flpProductos.Controls.Add(botonPro);
-
+                botonCat.Click += new EventHandler(clickCatg);
             }
             
-            for (int a = 0; a < 10; a++)
-            {
-                Button botonCat = new Button();
-                botonCat.Name = "Entrada" + a.ToString();
-                botonCat.Text = "Entrada #" + a.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                flpCbebidas.Controls.Add(botonCat);
-            }
-            for (int b = 0; b < 10; b++)
-            {
-                Button botonCat = new Button();
-                botonCat.Name = "Entrada" + b.ToString();
-                botonCat.Text = "Postre #" + b.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                flpCpostres.Controls.Add(botonCat);
-            }
         }
 
         private void clickProducto(object sender, EventArgs e)
@@ -76,11 +49,30 @@ namespace WindowsFormsApp2
             escojerCantidadProducto ecp = new escojerCantidadProducto();
             ecp.ShowDialog();
         }
-        private void clickMesa(object sender, EventArgs e)
+        private void clickCatg(object sender, EventArgs e)
         {
-            escojerMesa em = new escojerMesa();
-            em.Show();
+            if (flpProductos.Controls.Count>0)
+            {
+                flpProductos.Controls.Clear();
+            }
+            Button button = sender as Button;
+            String str = button.Name.Substring(button.Name.Length - 1);
+            ApiBase apbasep = new ApiBase();
+            Model.ProdEnCatgModel obj = new Model.ProdEnCatgModel();
+            obj.id_categoria = listaCatg[int.Parse(str)].id_categoria;
+            IRestResponse respuesta2 = apbasep.execApi(urlprodgcont, JsonConvert.SerializeObject(obj));
+            prodCatg = JsonConvert.DeserializeObject<List<Model.ProdEnCatgModel>>(respuesta2.Content);
+            for (int j = 0; j < prodCatg.Count; j++)
+            {
+                Button botonPro = new Button();
+                botonPro.Name = "btnprod" + j;
+                botonPro.Text = prodCatg[j].descripcion;
+                botonPro.Height = 100;
+                botonPro.Width = 100;
+                botonPro.Click += new EventHandler(clickProducto);
+                flpProductos.Controls.Add(botonPro);
 
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
