@@ -1,32 +1,53 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using System.Collections;
+using System.Data;
+using MySqlConnector;
 
-namespace CRUD
+namespace ConexionSql
 {
-    class Conexion
+    public class ClassConexion
     {
-        public static MySqlConnection conexion()
+        MySqlConnection con;
+        public bool error { get; set; }
+        public string MensjError { get; set; }
+        public ClassConexion()
         {
-            string servidor = "localhost";
-            string bd = "tienda";
-            string usuario = "root";
-            string password = "password";
-
-            string cadenaConexion = "Database=" + bd + "; Data Source=" + servidor + "; User Id= " + usuario + "; Password=" + password + "";
-
+            this.error = false;
             try
             {
-                MySqlConnection conexionBD = new MySqlConnection(cadenaConexion);
-
-                return conexionBD;
+                con = new MySqlConnection("server=localhost;userid=root;password=;database=restaurante");
             }
-            catch (MySqlException ex)
+            catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                this.MensjError = ex.Message;
+                this.error = true;
+            }
+        }
+
+        public DataTable proceder(string nom, ArrayList param, ArrayList campos)
+        {
+            try
+            {
+                using (con)
+                {
+                    con.Open();
+                    MySqlCommand cm = new MySqlCommand(nom, con);
+                    cm.CommandType = CommandType.StoredProcedure;
+                    for (int i = 0; i < param.Count; i++)
+                    {
+                        cm.Parameters.AddWithValue(param[i].ToString(), campos[i].ToString());
+                    }
+
+                    MySqlDataReader reader = cm.ExecuteReader();
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    return dataTable;
+                }
+            }
+            catch (Exception exrr)
+            {
+                this.MensjError = exrr.Message;
+                this.error = true;
                 return null;
             }
         }
