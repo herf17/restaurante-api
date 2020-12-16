@@ -18,6 +18,7 @@ namespace clsNegocios
         private ArrayList campos = new ArrayList();
         private string pa_buscaMesa = "pa_select_tbl_mesa";
         private string pa_producto_mesa = "pa_productos_enorden";
+        private string pa_orden = "pa_select_orden_mesaocupada";
         private DataTable mesas;
 
         public List<clsMesas> buscaMesas()
@@ -51,13 +52,26 @@ namespace clsNegocios
                         }
                     }
                     if(fila["estado"].ToString() == "O")
+                    {
+                        ArrayList pp = new ArrayList();
+                        ArrayList cc = new ArrayList();
+                        pp.Add("codmesa");
+                        cc.Add(fila["numero"].ToString());
+                        Conexion connn = new Conexion();
+                        DataTable objeto = connn.proceder(pa_orden, pp, cc);
+                        string idorden ="";
+                        foreach (DataRow fia in objeto.Rows)
+                        {
+                            idorden = fia["id_orden"].ToString();
+                        }
                         lista.Add(new clsMesas
                         {
                             numero = fila["numero"].ToString(),
-                            descripcion = fila["descripcion"].ToString(),
+                            descripcion = idorden,
                             estado = fila["estado"].ToString(),
                             pror = y
                         });
+                    }
                     else
                         lista.Add(new clsMesas
                         {

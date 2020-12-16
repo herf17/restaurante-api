@@ -63,13 +63,13 @@ namespace WindowsFormsApp2
                 {
                     dataTable.Rows.Add(mesasModel.pror[h].producto,mesasModel.pror[h].cantidad);
                 }
-                EstadoMesaO estadoMesao = new EstadoMesaO(dataTable);
+                EstadoMesaO estadoMesao = new EstadoMesaO(dataTable,mesasModel.descripcion);
                 estadoMesao.OcupadO += new EstadoMesaO.OrdenOcupado(this.Ordentermina);
                 estadoMesao.Show();
             }else if(String.Equals(mesasModel.estado, "L"))
             {
                 Form1 form = new Form1(mesasModel.numero);
-                form.OnAviso += new Form1.OrdenNueva(this.actualizarOcupado);
+                form.OnAviso += new Form1.OrdenNueva(this.Ordentermina);
                 form.Show();
             }
         }
