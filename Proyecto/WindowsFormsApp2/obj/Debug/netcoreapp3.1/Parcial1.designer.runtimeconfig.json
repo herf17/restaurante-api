@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Marilyn\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Marilyn\\.nuget\\packages"
+      "C:\\Users\\tesmi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\tesmi\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

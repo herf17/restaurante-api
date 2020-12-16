@@ -27,8 +27,18 @@ namespace Semestre_P1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            //Formulario ecp = new Formulario();
+            //ecp.ShowDialog();
+        }
+
+        private void FormMenuAdministracion_Load(object sender, EventArgs e)
+        {
+
+=======
             FormRegistrarUsuario ecp = new FormRegistrarUsuario();
             ecp.ShowDialog();
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
         }
     }
 }

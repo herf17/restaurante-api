@@ -11,7 +11,7 @@ namespace clsNegocios
     {
         public string id_usuario { get; set; }
         public string usuario { get; set; }
-        public string contrasenna { get; set; }
+        public string contrasena { get; set; }
         public string nombre { get; set; }
         public string cargo { get; set; }
         public string activo { get; set; }
@@ -33,13 +33,13 @@ namespace clsNegocios
         {
             ClassConexion conexion = new ClassConexion();
             parametros.Add("p_usuario");
-            parametros.Add("p_contrasenna");
+            parametros.Add("p_contrasena");
             parametros.Add("p_nombre");
             parametros.Add("p_cargo");
             parametros.Add("p_activo");
 
             valores.Add(this.usuario);
-            valores.Add(this.contrasenna);
+            valores.Add(this.contrasena);
             valores.Add(this.nombre);
             valores.Add(this.cargo);
             valores.Add(this.activo);
@@ -64,14 +64,14 @@ namespace clsNegocios
             ClassConexion conexion = new ClassConexion();
             parametros.Add("p_id_usuario");
             parametros.Add("p_usuario");
-            parametros.Add("p_contrasenna");
+            parametros.Add("p_contrasena");
             parametros.Add("p_nombre");
             parametros.Add("p_cargo");
             parametros.Add("p_activo");
 
             valores.Add(this.id_usuario);
             valores.Add(this.usuario);
-            valores.Add(this.contrasenna);
+            valores.Add(this.contrasena);
             valores.Add(this.nombre);
             valores.Add(this.cargo);
             valores.Add(this.activo);
@@ -94,19 +94,19 @@ namespace clsNegocios
 
         public List<clsUsuario> BuscaUsuario()
         {
-            ClassConexion conexion = new ClassConexion();
+            ClassConexion con = new ClassConexion();
             parametros.Add("p_id_usuario");
             valores.Add(this.id_usuario);
-            this.listado = conexion.proceder(sp_select_uno, parametros, valores);
+            this.listado = con.proceder(sp_select_uno, parametros, valores);
             List<clsMantenimientoUsuario> lista = new List<clsMantenimientoUsuario>();
-            if (!conexion.error)
+            if (!con.error)
                 foreach (DataRow row in this.listado.Rows)
                 {
                     lista.Add(new clsMantenimientoUsuario
                     {
                         id_usuario = row["id_usuario"].ToString(),
                         usuario = row["usuario"].ToString(),
-                        contrasenna = row["contrasenna"].ToString(),
+                        contrasena = row["contrasena"].ToString(),
                         nombre = row["nombre"].ToString(),
                         cargo = row["cargo"].ToString(),
                         activo = row["activo"].ToString(),
@@ -130,7 +130,7 @@ namespace clsNegocios
                     {
                         id_usuario = row["id_usuario"].ToString(),
                         usuario = row["usuario"].ToString(),
-                        contrasenna = row["contrasenna"].ToString(),
+                        contrasena = row["contrasena"].ToString(),
                         nombre = row["contrasenna"].ToString(),
                         cargo = row["cargo"].ToString(),
                         activo = row["activo"].ToString(),

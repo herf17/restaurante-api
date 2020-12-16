@@ -37,7 +37,7 @@ namespace RestauranteFront
             List<clsMantenimientoUsuario> lista_obj = JsonConvert.DeserializeObject<List<clsMantenimientoUsuario>>(respuesta.Content);
             for(int n = 0; n < lista_obj.Count; n++)
             {
-                String[] arr = { lista_obj[n].id_usuario, lista_obj[n].usuario, lista_obj[n].contrasenna, lista_obj[n].nombre, lista_obj[n].cargo, lista_obj[n].activo };
+                String[] arr = { lista_obj[n].id_usuario, lista_obj[n].usuario, lista_obj[n].contrasena, lista_obj[n].nombre, lista_obj[n].cargo, lista_obj[n].activo };
                 dataGridView1.Rows.Add(arr);
                 
             }
