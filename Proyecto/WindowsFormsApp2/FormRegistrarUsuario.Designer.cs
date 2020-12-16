@@ -1,6 +1,6 @@
 ﻿namespace RestauranteFront
 {
-    partial class FUsuario
+    partial class FormRegistrarUsuario
     {
         /// <summary>
         /// Required designer variable.
