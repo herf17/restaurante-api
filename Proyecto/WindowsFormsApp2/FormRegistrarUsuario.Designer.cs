@@ -145,7 +145,11 @@
             this.button1.Location = new System.Drawing.Point(466, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button1.Name = "button1";
+<<<<<<< HEAD
             this.button1.Size = new System.Drawing.Size(387, 87);
+=======
+            this.button1.Size = new System.Drawing.Size(191, 65);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button1.TabIndex = 9;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = false;
@@ -158,7 +162,11 @@
             this.button2.Location = new System.Drawing.Point(466, 125);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button2.Name = "button2";
+<<<<<<< HEAD
             this.button2.Size = new System.Drawing.Size(387, 88);
+=======
+            this.button2.Size = new System.Drawing.Size(191, 66);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button2.TabIndex = 10;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = false;
@@ -170,7 +178,11 @@
             this.button3.Location = new System.Drawing.Point(466, 235);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button3.Name = "button3";
+<<<<<<< HEAD
             this.button3.Size = new System.Drawing.Size(387, 92);
+=======
+            this.button3.Size = new System.Drawing.Size(191, 69);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button3.TabIndex = 11;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
@@ -179,7 +191,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(866, 340);
+=======
+            this.ClientSize = new System.Drawing.Size(606, 255);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

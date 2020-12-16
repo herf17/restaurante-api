@@ -50,9 +50,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.Location = new System.Drawing.Point(323, 431);
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(283, 323);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 39);
+            this.button1.Size = new System.Drawing.Size(90, 29);
             this.button1.TabIndex = 1;
             this.button1.Text = "Borrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -95,12 +97,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.btnImprimir);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dgvReportesDeOrdenes);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 9);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1046, 494);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(915, 370);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -108,9 +113,11 @@
             // btnImprimir
             // 
             this.btnImprimir.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnImprimir.Location = new System.Drawing.Point(616, 431);
+            this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnImprimir.Location = new System.Drawing.Point(539, 323);
+            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(103, 39);
+            this.btnImprimir.Size = new System.Drawing.Size(90, 29);
             this.btnImprimir.TabIndex = 1;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -126,10 +133,11 @@
             this.ColumnNumeroDeMesa,
             this.ColumnCliente,
             this.ColumnEstado});
-            this.dgvReportesDeOrdenes.Location = new System.Drawing.Point(53, 41);
+            this.dgvReportesDeOrdenes.Location = new System.Drawing.Point(46, 31);
+            this.dgvReportesDeOrdenes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvReportesDeOrdenes.Name = "dgvReportesDeOrdenes";
             this.dgvReportesDeOrdenes.RowHeadersWidth = 51;
-            this.dgvReportesDeOrdenes.Size = new System.Drawing.Size(954, 358);
+            this.dgvReportesDeOrdenes.Size = new System.Drawing.Size(835, 268);
             this.dgvReportesDeOrdenes.TabIndex = 0;
             this.dgvReportesDeOrdenes.Text = "dataGridView1";
             // 
@@ -198,10 +206,11 @@
             // 
             // FormReportesDeOrdenes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 544);
+            this.ClientSize = new System.Drawing.Size(962, 408);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReportesDeOrdenes";

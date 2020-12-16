@@ -7,6 +7,9 @@
     <Compile Update="escojerMesa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="EstadoMesaO.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormMenuAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormMenuOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormRegistrarUsuario.cs">
@@ -38,9 +44,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormVerUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="FormMenuOpciones.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

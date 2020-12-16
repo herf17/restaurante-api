@@ -44,10 +44,16 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+<<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(17, 23);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(518, 232);
+=======
+            this.button1.Location = new System.Drawing.Point(0, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(344, 125);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button1.TabIndex = 1;
             this.button1.Text = "Administración";
             this.button1.UseVisualStyleBackColor = false;
@@ -57,10 +63,16 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(17, 263);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(518, 233);
+=======
+            this.button2.Location = new System.Drawing.Point(0, 148);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(344, 116);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button2.TabIndex = 1;
             this.button2.Text = "Creación de ordenes";
             this.button2.UseVisualStyleBackColor = false;
@@ -70,10 +82,16 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+<<<<<<< HEAD
             this.button3.Location = new System.Drawing.Point(542, 263);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(474, 233);
+=======
+            this.button3.Location = new System.Drawing.Point(350, 148);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(354, 116);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button3.TabIndex = 1;
             this.button3.Text = "Pedidos Pendientes";
             this.button3.UseVisualStyleBackColor = false;
@@ -82,10 +100,16 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+<<<<<<< HEAD
             this.button4.Location = new System.Drawing.Point(542, 23);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(474, 232);
+=======
+            this.button4.Location = new System.Drawing.Point(350, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(354, 125);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.button4.TabIndex = 1;
             this.button4.Text = "Listado";
             this.button4.UseVisualStyleBackColor = false;
@@ -99,26 +123,44 @@
             this.panel1.Location = new System.Drawing.Point(14, 280);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
+<<<<<<< HEAD
             this.panel1.Size = new System.Drawing.Size(1033, 519);
+=======
+            this.panel1.Size = new System.Drawing.Size(718, 275);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
+<<<<<<< HEAD
             this.pictureBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.pictureBox1.Location = new System.Drawing.Point(14, 16);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1033, 256);
+=======
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(704, 206);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.WindowFrame;
+<<<<<<< HEAD
             this.pictureBox2.Location = new System.Drawing.Point(397, 16);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(315, 256);
+=======
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(222, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(270, 206);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -126,7 +168,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1061, 815);
+=======
+            this.ClientSize = new System.Drawing.Size(722, 483);
+>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
