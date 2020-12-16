@@ -111,18 +111,21 @@
             // 
             this.groupBox1.Controls.Add(this.btnBorrar);
             this.groupBox1.Controls.Add(this.dataGridViewDetalle);
-            this.groupBox1.Location = new System.Drawing.Point(12, 43);
+            this.groupBox1.Location = new System.Drawing.Point(10, 32);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(668, 442);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(584, 332);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnBorrar
             // 
             this.btnBorrar.BackColor = System.Drawing.Color.Orange;
-            this.btnBorrar.Location = new System.Drawing.Point(313, 397);
+            this.btnBorrar.Location = new System.Drawing.Point(274, 298);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(103, 39);
+            this.btnBorrar.Size = new System.Drawing.Size(90, 29);
             this.btnBorrar.TabIndex = 1;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = false;
@@ -136,10 +139,11 @@
             this.cantidad,
             this.precioUnitario,
             this.precioTotal});
-            this.dataGridViewDetalle.Location = new System.Drawing.Point(16, 11);
+            this.dataGridViewDetalle.Location = new System.Drawing.Point(14, 8);
+            this.dataGridViewDetalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewDetalle.Name = "dataGridViewDetalle";
             this.dataGridViewDetalle.RowHeadersWidth = 51;
-            this.dataGridViewDetalle.Size = new System.Drawing.Size(633, 365);
+            this.dataGridViewDetalle.Size = new System.Drawing.Size(554, 274);
             this.dataGridViewDetalle.TabIndex = 0;
             this.dataGridViewDetalle.Text = "dataGridView1";
             this.dataGridViewDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDetalle_CellContentClick);
@@ -183,9 +187,10 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 521);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 385);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(738, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 12, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(646, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -552,6 +557,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -559,14 +565,14 @@
             this.menuReportes});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(738, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(646, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "Archivo";
             // 
             // menuArchivo
             // 
             this.menuArchivo.Name = "menuArchivo";
-            this.menuArchivo.Size = new System.Drawing.Size(73, 24);
+            this.menuArchivo.Size = new System.Drawing.Size(62, 20);
             this.menuArchivo.Text = "Archivo";
             // 
             // menuReportes
@@ -578,34 +584,34 @@
             this.subReporteVentasTotales,
             this.subReporteProductoMásVendido});
             this.menuReportes.Name = "menuReportes";
-            this.menuReportes.Size = new System.Drawing.Size(82, 24);
+            this.menuReportes.Size = new System.Drawing.Size(68, 20);
             this.menuReportes.Text = "Reportes";
             // 
             // subReporteMesa
             // 
             this.subReporteMesa.Name = "subReporteMesa";
-            this.subReporteMesa.Size = new System.Drawing.Size(338, 26);
+            this.subReporteMesa.Size = new System.Drawing.Size(278, 22);
             this.subReporteMesa.Text = "Reportes de Mesa";
             this.subReporteMesa.Click += new System.EventHandler(this.subReporteMesa_Click);
             // 
             // subReporteProductos
             // 
             this.subReporteProductos.Name = "subReporteProductos";
-            this.subReporteProductos.Size = new System.Drawing.Size(338, 26);
+            this.subReporteProductos.Size = new System.Drawing.Size(278, 22);
             this.subReporteProductos.Text = "Reportes de Productos";
             this.subReporteProductos.Click += new System.EventHandler(this.subReporteProductos_Click);
             // 
             // subReporteOrdenes
             // 
             this.subReporteOrdenes.Name = "subReporteOrdenes";
-            this.subReporteOrdenes.Size = new System.Drawing.Size(338, 26);
+            this.subReporteOrdenes.Size = new System.Drawing.Size(278, 22);
             this.subReporteOrdenes.Text = "Reportes de Ordenes";
             this.subReporteOrdenes.Click += new System.EventHandler(this.subReporteOrdenes_Click);
             // 
             // subReporteVentasTotales
             // 
             this.subReporteVentasTotales.Name = "subReporteVentasTotales";
-            this.subReporteVentasTotales.Size = new System.Drawing.Size(338, 26);
+            this.subReporteVentasTotales.Size = new System.Drawing.Size(278, 22);
             this.subReporteVentasTotales.Text = "Reportes de Ventas Totales";
             this.subReporteVentasTotales.Click += new System.EventHandler(this.subReporteVentasTotales_Click);
             this.subReporteVentasTotales.DoubleClick += new System.EventHandler(this.subReporteVentasTotales_DoubleClick);
@@ -613,20 +619,21 @@
             // subReporteProductoMásVendido
             // 
             this.subReporteProductoMásVendido.Name = "subReporteProductoMásVendido";
-            this.subReporteProductoMásVendido.Size = new System.Drawing.Size(338, 26);
+            this.subReporteProductoMásVendido.Size = new System.Drawing.Size(278, 22);
             this.subReporteProductoMásVendido.Text = "Reportes de Productos Más Vendidos";
             this.subReporteProductoMásVendido.Click += new System.EventHandler(this.subReporteProductoMásVendido_Click);
             // 
             // FormMDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 543);
+            this.ClientSize = new System.Drawing.Size(646, 407);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMDI";

@@ -58,9 +58,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(24, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.Size = new System.Drawing.Size(55, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mesas";
             // 
@@ -76,6 +77,7 @@
             // flpMesas
             // 
             this.flpMesas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpMesas.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.flpMesas.Location = new System.Drawing.Point(0, 0);
             this.flpMesas.Name = "flpMesas";
             this.flpMesas.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);

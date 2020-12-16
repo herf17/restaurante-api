@@ -15,4 +15,26 @@
     <ProjectReference Include="..\clsNegocios\clsNegocios.csproj" />
   </ItemGroup>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+=======
+>>>>>>> 8ab08e5f3944ef4f5b12f8d94ee9149746c76f75
+>>>>>>> f8bf9d364f5500e1629f5d5c7f52450607b6b2e9
+>>>>>>> 5fc4df9fc925aa09a2bf7a52ee02136042b351f3
 </Project>
