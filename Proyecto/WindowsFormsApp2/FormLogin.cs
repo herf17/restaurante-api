@@ -52,5 +52,10 @@ namespace RestauranteFront
             else
                 MessageBox.Show("Erro de usuario o Contraseña");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

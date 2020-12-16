@@ -145,7 +145,7 @@
             this.button1.Location = new System.Drawing.Point(408, 9);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(339, 65);
+            this.button1.Size = new System.Drawing.Size(191, 65);
             this.button1.TabIndex = 9;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@
             this.button2.Location = new System.Drawing.Point(408, 94);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(339, 66);
+            this.button2.Size = new System.Drawing.Size(191, 66);
             this.button2.TabIndex = 10;
             this.button2.Text = "Modificar";
             this.button2.UseVisualStyleBackColor = false;
@@ -170,16 +170,16 @@
             this.button3.Location = new System.Drawing.Point(408, 176);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(339, 69);
+            this.button3.Size = new System.Drawing.Size(191, 69);
             this.button3.TabIndex = 11;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // frmUsuario
+            // FormRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 255);
+            this.ClientSize = new System.Drawing.Size(606, 255);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -194,7 +194,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.Name = "frmUsuario";
+            this.Name = "FormRegistrarUsuario";
             this.Text = "frmUsuario";
             this.ResumeLayout(false);
             this.PerformLayout();

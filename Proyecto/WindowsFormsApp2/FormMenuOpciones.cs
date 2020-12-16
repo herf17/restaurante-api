@@ -22,7 +22,7 @@ namespace Semestre_P1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Administracion ecp = new Administracion();
+            FormMenuAdministracion ecp = new FormMenuAdministracion();
             ecp.ShowDialog();
 
         }

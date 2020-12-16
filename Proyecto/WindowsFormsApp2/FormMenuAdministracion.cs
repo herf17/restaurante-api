@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
 using System.Data;
+using clsNegocios;
 
 namespace Semestre_P1
 {
@@ -26,7 +27,7 @@ namespace Semestre_P1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Formulario ecp = new Formulario();
+            FormRegistrarUsuario ecp = new FormRegistrarUsuario();
             ecp.ShowDialog();
         }
     }
