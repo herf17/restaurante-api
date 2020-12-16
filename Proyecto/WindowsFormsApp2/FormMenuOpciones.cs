@@ -22,8 +22,8 @@ namespace Semestre_P1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Administracion ecp = new Administracion();
-            ecp.ShowDialog();
+           // Administracion ecp = new Administracion();
+            // ecp.ShowDialog();
 
         }
 
@@ -31,6 +31,11 @@ namespace Semestre_P1
         {
             Form ecp = new Form();
             ecp.ShowDialog();
+        }
+
+        private void menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

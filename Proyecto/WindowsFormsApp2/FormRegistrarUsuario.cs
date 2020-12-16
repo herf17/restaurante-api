@@ -24,7 +24,7 @@ namespace RestauranteFront
 
             clsMantenimientoUsuario obj_usuario = new clsMantenimientoUsuario();
             obj_usuario.usuario = txtUsuario.Text;
-            obj_usuario.contrasenna = txtContrasenna.Text;
+            obj_usuario.contrasena = txtContrasenna.Text;
             obj_usuario.nombre = txtNombre.Text;
             obj_usuario.cargo = txtCargo.Text;
             obj_usuario.activo = txtActivo.Text;
@@ -47,6 +47,11 @@ namespace RestauranteFront
                 MessageBox.Show("Se ha creado el usuario con ID " + obj_usuario.id_usuario);
             else
                 MessageBox.Show("No se creó el usuario, intente nuevamente.");
+        }
+
+        private void FormRegistrarUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,7 @@ namespace RestauranteFront
 
             clsMantenimientoUsuario obj_usuario = new clsMantenimientoUsuario();
             obj_usuario.usuario = txtUsuario.Text;
-            obj_usuario.contrasenna = txtPassword.Text;
+            obj_usuario.contrasena = txtPassword.Text;
 
    
             string json = JsonConvert.SerializeObject(obj_usuario);
@@ -51,6 +51,11 @@ namespace RestauranteFront
             }
             else
                 MessageBox.Show("Erro de usuario o Contraseña");
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
