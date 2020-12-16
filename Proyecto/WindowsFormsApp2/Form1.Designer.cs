@@ -31,17 +31,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabEntr = new System.Windows.Forms.TabPage();
-            this.flpCentra = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPf = new System.Windows.Forms.TabPage();
             this.flpCplatosfue = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabBebid = new System.Windows.Forms.TabPage();
-            this.flpCbebidas = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabPostr = new System.Windows.Forms.TabPage();
-            this.flpCpostres = new System.Windows.Forms.FlowLayoutPanel();
             this.flpProductos = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btcompra = new System.Windows.Forms.Button();
             this.txtidcli = new System.Windows.Forms.TextBox();
             this.lbpunts = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,17 +53,13 @@
             this.canti = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preci = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btcompra = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabEntr.SuspendLayout();
             this.tabPf.SuspendLayout();
-            this.tabBebid.SuspendLayout();
-            this.tabPostr.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -111,36 +102,13 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabEntr);
             this.tabControl1.Controls.Add(this.tabPf);
-            this.tabControl1.Controls.Add(this.tabBebid);
-            this.tabControl1.Controls.Add(this.tabPostr);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(582, 197);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabEntr
-            // 
-            this.tabEntr.Controls.Add(this.flpCentra);
-            this.tabEntr.Location = new System.Drawing.Point(4, 24);
-            this.tabEntr.Name = "tabEntr";
-            this.tabEntr.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEntr.Size = new System.Drawing.Size(574, 169);
-            this.tabEntr.TabIndex = 0;
-            this.tabEntr.Text = "Entradas";
-            this.tabEntr.UseVisualStyleBackColor = true;
-            // 
-            // flpCentra
-            // 
-            this.flpCentra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpCentra.Location = new System.Drawing.Point(3, 3);
-            this.flpCentra.Name = "flpCentra";
-            this.flpCentra.Size = new System.Drawing.Size(568, 163);
-            this.flpCentra.TabIndex = 0;
-            this.flpCentra.Paint += new System.Windows.Forms.PaintEventHandler(this.flpCentra_Paint);
             // 
             // tabPf
             // 
@@ -149,7 +117,7 @@
             this.tabPf.Name = "tabPf";
             this.tabPf.Size = new System.Drawing.Size(574, 169);
             this.tabPf.TabIndex = 2;
-            this.tabPf.Text = "Platos fuertes";
+            this.tabPf.Text = "Categorias";
             // 
             // flpCplatosfue
             // 
@@ -158,42 +126,6 @@
             this.flpCplatosfue.Name = "flpCplatosfue";
             this.flpCplatosfue.Size = new System.Drawing.Size(574, 169);
             this.flpCplatosfue.TabIndex = 0;
-            // 
-            // tabBebid
-            // 
-            this.tabBebid.Controls.Add(this.flpCbebidas);
-            this.tabBebid.Location = new System.Drawing.Point(4, 24);
-            this.tabBebid.Name = "tabBebid";
-            this.tabBebid.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBebid.Size = new System.Drawing.Size(574, 169);
-            this.tabBebid.TabIndex = 1;
-            this.tabBebid.Text = "Bebidas";
-            this.tabBebid.UseVisualStyleBackColor = true;
-            // 
-            // flpCbebidas
-            // 
-            this.flpCbebidas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpCbebidas.Location = new System.Drawing.Point(3, 3);
-            this.flpCbebidas.Name = "flpCbebidas";
-            this.flpCbebidas.Size = new System.Drawing.Size(568, 163);
-            this.flpCbebidas.TabIndex = 0;
-            // 
-            // tabPostr
-            // 
-            this.tabPostr.Controls.Add(this.flpCpostres);
-            this.tabPostr.Location = new System.Drawing.Point(4, 24);
-            this.tabPostr.Name = "tabPostr";
-            this.tabPostr.Size = new System.Drawing.Size(574, 169);
-            this.tabPostr.TabIndex = 3;
-            this.tabPostr.Text = "Postres";
-            // 
-            // flpCpostres
-            // 
-            this.flpCpostres.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpCpostres.Location = new System.Drawing.Point(0, 0);
-            this.flpCpostres.Name = "flpCpostres";
-            this.flpCpostres.Size = new System.Drawing.Size(574, 169);
-            this.flpCpostres.TabIndex = 0;
             // 
             // flpProductos
             // 
@@ -232,6 +164,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(273, 146);
             this.panel2.TabIndex = 1;
+            // 
+            // btcompra
+            // 
+            this.btcompra.Location = new System.Drawing.Point(20, 114);
+            this.btcompra.Name = "btcompra";
+            this.btcompra.Size = new System.Drawing.Size(75, 23);
+            this.btcompra.TabIndex = 11;
+            this.btcompra.Text = "Guardar";
+            this.btcompra.UseVisualStyleBackColor = true;
+            this.btcompra.Click += new System.EventHandler(this.btcompra_Click);
             // 
             // txtidcli
             // 
@@ -379,16 +321,6 @@
             this.id.Name = "id";
             this.id.Visible = false;
             // 
-            // btcompra
-            // 
-            this.btcompra.Location = new System.Drawing.Point(20, 114);
-            this.btcompra.Name = "btcompra";
-            this.btcompra.Size = new System.Drawing.Size(75, 23);
-            this.btcompra.TabIndex = 11;
-            this.btcompra.Text = "Guardar";
-            this.btcompra.UseVisualStyleBackColor = true;
-            this.btcompra.Click += new System.EventHandler(this.btcompra_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -403,10 +335,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabEntr.ResumeLayout(false);
             this.tabPf.ResumeLayout(false);
-            this.tabBebid.ResumeLayout(false);
-            this.tabPostr.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -420,20 +349,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabEntr;
-        private System.Windows.Forms.TabPage tabBebid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbtotal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flpCentra;
-        private System.Windows.Forms.FlowLayoutPanel flpCbebidas;
         private System.Windows.Forms.FlowLayoutPanel flpProductos;
         private System.Windows.Forms.TabPage tabPf;
         private System.Windows.Forms.FlowLayoutPanel flpCplatosfue;
-        private System.Windows.Forms.TabPage tabPostr;
-        private System.Windows.Forms.FlowLayoutPanel flpCpostres;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
