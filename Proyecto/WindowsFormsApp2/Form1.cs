@@ -7,80 +7,114 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using RestSharp;
 
 namespace WindowsFormsApp2
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public delegate void OrdenNueva(string str);
+        public event OrdenNueva OnAviso;
+
+
+        private String urlcatgcont = "solicitarordenes/categorias";
+        private String urlprodgcont = "solicitarordenes/productoscatg";
+        private String urlclpnts = "solicitarordenes/puntscl";
+        private String urlnuevaorden = "solicitarordenes/nuevaorden";
+        private String coman = null;
+        string idcliente;
+        string idmesa;
+        int idmenu;
+        List<Model.CategModel> listaCatg;
+        List<Model.ProdEnCatgModel> prodCatg;
+        Model.SolcClsModel clienteinfo;
+        
+        public Form1(string idmesa)
         {
             InitializeComponent();
+            this.idmesa = idmesa;
             cargaboto();
         }
         private void cargaboto()
         {
             //Carga categoria 1 entrada
-            for (int n = 0; n < 10; n++)
+            ApiBase apbase = new ApiBase();
+            IRestResponse respuesta = apbase.execApi(urlcatgcont, coman);
+            listaCatg = JsonConvert.DeserializeObject<List<Model.CategModel>>(respuesta.Content);
+
+            for (int i = 0; i < listaCatg.Count; i++)
             {
                 Button botonCat = new Button();
-                botonCat.Name = "Entrada" + n.ToString();
-                botonCat.Text = "Entreda #" + n.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                botonCat.Click += new EventHandler(clickMesa);
-                flpCentra.Controls.Add(botonCat);
-            }
-            for (int i = 0; i < 10; i++)
-            {
-                Button botonCat = new Button();
-                botonCat.Name = "btncat" + i.ToString();
-                botonCat.Text = "categoria" + i.ToString();
+                botonCat.Name = "btncat" + i;
+                botonCat.Text = listaCatg[i].nombre;
                 botonCat.Width = 90;
                 botonCat.Height = 80;
                 flpCplatosfue.Controls.Add(botonCat);
+                botonCat.Click += new EventHandler(clickCatg);
             }
-            for (int j = 0; j < 30; j++)
+            
+        }
+
+        private void clickProducto(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            idmenu =int.Parse(button.Name.Substring(button.Name.Length - 1));
+            escojerCantidadProducto ecp = new escojerCantidadProducto();
+            ecp.OnMessage += new escojerCantidadProducto.Message(this.txtMessage);
+            ecp.ShowDialog();
+        }
+        private void clickCatg(object sender, EventArgs e)
+        {
+            if (flpProductos.Controls.Count>0)
+            {
+                flpProductos.Controls.Clear();
+            }
+            Button button = sender as Button;
+            String str = button.Name.Substring(button.Name.Length - 1);
+            ApiBase apbasep = new ApiBase();
+            Model.ProdEnCatgModel obj = new Model.ProdEnCatgModel();
+            obj.id_categoria = listaCatg[int.Parse(str)].id_categoria;
+            IRestResponse respuesta2 = apbasep.execApi(urlprodgcont, JsonConvert.SerializeObject(obj));
+            prodCatg = JsonConvert.DeserializeObject<List<Model.ProdEnCatgModel>>(respuesta2.Content);
+            for (int j = 0; j < prodCatg.Count; j++)
             {
                 Button botonPro = new Button();
-                botonPro.Name = "btnprod" + j.ToString();
-                botonPro.Text = "producto #" + j.ToString();
+                botonPro.Name = "btnprod" + j;
+                botonPro.Text = prodCatg[j].descripcion;
                 botonPro.Height = 100;
                 botonPro.Width = 100;
                 botonPro.Click += new EventHandler(clickProducto);
                 flpProductos.Controls.Add(botonPro);
 
             }
+        }
+
+        private void txtMessage(string str)
+        {
+            dataGridView1.Rows.Add(prodCatg[idmenu].id_producto,prodCatg[idmenu].descripcion,str,prodCatg[idmenu].precio);
+            refreshtotal();
+        }
+
+        private void edit(string nuevo)
+        {
+            int indicef = dataGridView1.SelectedRows[0].Index;
+            dataGridView1.Rows[indicef].Cells[2].Value = nuevo;
+            refreshtotal();
+        }
+
+        private void refreshtotal()
+        {
             
-            for (int a = 0; a < 10; a++)
+            double acumulador = 0.00;
+            foreach(DataGridViewRow fila in dataGridView1.Rows)
             {
-                Button botonCat = new Button();
-                botonCat.Name = "Entrada" + a.ToString();
-                botonCat.Text = "Entrada #" + a.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                flpCbebidas.Controls.Add(botonCat);
+                string g =fila.Cells["canti"].Value.ToString();
+                double a = double.Parse(fila.Cells["canti"].Value.ToString());
+                double b = double.Parse(fila.Cells["preci"].Value.ToString());
+                acumulador +=(a*b);
             }
-            for (int b = 0; b < 10; b++)
-            {
-                Button botonCat = new Button();
-                botonCat.Name = "Entrada" + b.ToString();
-                botonCat.Text = "Postre #" + b.ToString();
-                botonCat.Width = 90;
-                botonCat.Height = 80;
-                flpCpostres.Controls.Add(botonCat);
-            }
-        }
-
-        private void clickProducto(object sender, EventArgs e)
-        {
-            escojerCantidadProducto ecp = new escojerCantidadProducto();
-            ecp.ShowDialog();
-        }
-        private void clickMesa(object sender, EventArgs e)
-        {
-            escojerMesa em = new escojerMesa();
-            em.Show();
-
+            txbtotal.Text = acumulador.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -91,6 +125,79 @@ namespace WindowsFormsApp2
         private void flpCentra_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnedit_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count>0)
+            {
+                escojerCantidadProducto ecp = new escojerCantidadProducto();
+                ecp.OnMessage += new escojerCantidadProducto.Message(this.edit);
+                ecp.ShowDialog();
+                
+            }
+        }
+
+        private void btnelim_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count>0)
+            {
+                int indicef = dataGridView1.SelectedRows[0].Index;
+                dataGridView1.Rows.RemoveAt(indicef);
+                refreshtotal();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btcli_Click(object sender, EventArgs e)
+        {
+            idcliente = txtidcli.Text;
+            ApiBase llamada = new ApiBase();
+            Model.SolcClsModel modelo = new Model.SolcClsModel();
+            modelo.id_cliente = idcliente;
+            IRestResponse resp = llamada.execApi(urlclpnts, JsonConvert.SerializeObject(modelo));
+            clienteinfo = JsonConvert.DeserializeObject<Model.SolcClsModel>(resp.Content);
+            lbnombre.Text = String.Concat(clienteinfo.nombre, clienteinfo.apellido);
+            lbpunts.Text = clienteinfo.puntos;
+
+        }
+
+        private void btcompra_Click(object sender, EventArgs e)
+        {
+            ApiBase apbasep = new ApiBase();
+            Model.NuevaOrdenModel obj = new Model.NuevaOrdenModel();
+            obj.total = txbtotal.Text;
+            obj.iduser = "2";//aqui va el id del usuario que se obtiene con el login
+            obj.mesa =idmesa;
+            obj.idclient = idcliente;
+            List<Model.ProductosEnOrdenModel> productoss = new List<Model.ProductosEnOrdenModel>();
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                double c =double.Parse(fila.Cells["canti"].Value.ToString());
+                double p = double.Parse(fila.Cells["preci"].Value.ToString());
+                double t = (c * p);
+                productoss.Add(new Model.ProductosEnOrdenModel {idproduct =fila.Cells["idproducto"].Value.ToString(),cantidades= c.ToString(),preciosss= p.ToString(),totality=t.ToString()});
+            }
+            obj.productos = productoss;
+            IRestResponse respues = apbasep.execApi(urlnuevaorden, JsonConvert.SerializeObject(obj));
+            string h = JsonConvert.DeserializeObject<String>(respues.Content);
+            if (!string.IsNullOrEmpty(h))
+            {
+                this.OnAviso(h);
+                this.Close();
+
+            }
+            else
+                MessageBox.Show("Error");
         }
     }
 }
