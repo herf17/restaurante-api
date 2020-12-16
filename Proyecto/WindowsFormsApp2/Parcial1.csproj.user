@@ -16,9 +16,6 @@
     <Compile Update="FormMDI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormMenuAdministracion.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormRegistrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
