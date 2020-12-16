@@ -11,8 +11,11 @@
     <PackageReference Include="RestSharp" Version="106.11.7" />
   </ItemGroup>
 
+<<<<<<< HEAD
+=======
   <ItemGroup>
     <ProjectReference Include="..\clsNegocios\clsNegocios.csproj" />
   </ItemGroup>
 
+>>>>>>> 8ab08e5f3944ef4f5b12f8d94ee9149746c76f75
 </Project>
