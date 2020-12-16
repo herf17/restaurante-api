@@ -107,120 +107,120 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(309, 247);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-<<<<<<< HEAD
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 55);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "7";
-            this.button1.UseVisualStyleBackColor = true;
+            /*
+            this.btn7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn7.Location = new System.Drawing.Point(3, 3);
+            this.btn7.Name = "button1";
+            this.btn7.Size = new System.Drawing.Size(96, 55);
+            this.btn7.TabIndex = 0;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(105, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 55);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "8";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn8.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn8.Location = new System.Drawing.Point(105, 3);
+            this.btn8.Name = "button2";
+            this.btn8.Size = new System.Drawing.Size(96, 55);
+            this.btn8.TabIndex = 1;
+            this.btn8.Text = "8";
+            this.btn8.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(207, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 55);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "9";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn9.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn9.Location = new System.Drawing.Point(207, 3);
+            this.btn9.Name = "button3";
+            this.btn9.Size = new System.Drawing.Size(99, 55);
+            this.btn9.TabIndex = 2;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button4.Location = new System.Drawing.Point(3, 64);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 55);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn4.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn4.Location = new System.Drawing.Point(3, 64);
+            this.btn4.Name = "button4";
+            this.btn4.Size = new System.Drawing.Size(96, 55);
+            this.btn4.TabIndex = 3;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button5.Location = new System.Drawing.Point(105, 64);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 55);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn5.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn5.Location = new System.Drawing.Point(105, 64);
+            this.btn5.Name = "button5";
+            this.btn5.Size = new System.Drawing.Size(96, 55);
+            this.btn5.TabIndex = 4;
+            this.btn5.Text = "5";
+            this.btn5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button6.Location = new System.Drawing.Point(207, 64);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 55);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn6.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn6.Location = new System.Drawing.Point(207, 64);
+            this.btn6.Name = "button6";
+            this.btn6.Size = new System.Drawing.Size(99, 55);
+            this.btn6.TabIndex = 5;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button7.Location = new System.Drawing.Point(3, 125);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(96, 55);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "1";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn1.Location = new System.Drawing.Point(3, 125);
+            this.btn1.Name = "button7";
+            this.btn1.Size = new System.Drawing.Size(96, 55);
+            this.btn1.TabIndex = 6;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button8.Location = new System.Drawing.Point(105, 125);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(96, 55);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "2";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn2.Location = new System.Drawing.Point(105, 125);
+            this.btn2.Name = "but8";
+            this.btn2.Size = new System.Drawing.Size(96, 55);
+            this.btn2.TabIndex = 7;
+            this.btn2.Text = "2";
+            this.btn2.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button9.Location = new System.Drawing.Point(207, 125);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(99, 55);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "3";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn3.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn3.Location = new System.Drawing.Point(207, 125);
+            this.btn3.Name = "button9";
+            this.btn3.Size = new System.Drawing.Size(99, 55);
+            this.btn3.TabIndex = 8;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = true;
             // 
             // button10
             // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(105, 186);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(96, 58);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn0.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn0.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btn0.Location = new System.Drawing.Point(105, 186);
+            this.btn0.Name = "button10";
+            this.btn0.Size = new System.Drawing.Size(96, 58);
+            this.btn0.TabIndex = 9;
+            this.btn0.Text = "0";
+            this.btn0.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.button11.Location = new System.Drawing.Point(3, 186);
             this.button11.Name = "button11";
@@ -239,7 +239,7 @@
             this.button12.TabIndex = 11;
             this.button12.Text = "OK";
             this.button12.UseVisualStyleBackColor = true;
-=======
+=======*/
             // btn7
             // 
             this.btn7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -371,7 +371,6 @@
             this.btnok.Text = "OK";
             this.btnok.UseVisualStyleBackColor = true;
             this.btnok.Click += new System.EventHandler(this.btnok_Click);
->>>>>>> f8bf9d364f5500e1629f5d5c7f52450607b6b2e9
             // 
             // escojerCantidadProducto
             // 

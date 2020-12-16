@@ -252,6 +252,7 @@
             this.label3.Size = new System.Drawing.Size(83, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Total a pagar";
+            /*
             // 
 <<<<<<< HEAD
             // label2
@@ -277,7 +278,7 @@
             this.label1.Size = new System.Drawing.Size(83, 15);
 =======
             this.label1.Size = new System.Drawing.Size(0, 15);
->>>>>>> f8bf9d364f5500e1629f5d5c7f52450607b6b2e9
+>>>>>>> f8bf9d364f5500e1629f5d5c7f52450607b6b2e9*/
             this.label1.TabIndex = 2;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
