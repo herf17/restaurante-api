@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using ConexionMysql;
+using ConexionSql;
+
 namespace clsNegocios
 {
-    public class clsUsuario
+    public class clsMantenimientoUsuario
     {
         public string id_usuario { get; set; }
         public string usuario { get; set; }
@@ -26,11 +27,11 @@ namespace clsNegocios
         private string sp_select_uno = "sp_select_tbl_usuario_uno";
         private string sp_select_todos = "sp_select_tbl_usuario_todos"; 
         private DataTable listado;
-        public clsUsuario() { }
+        public clsMantenimientoUsuario() { }
 
-        public clsUsuario insert_ususario()
+        public clsMantenimientoUsuario insert_ususario()
         {
-            clsConexion con = new clsConexion();
+            ClassConexion conexion = new ClassConexion();
             parametros.Add("p_usuario");
             parametros.Add("p_contrasenna");
             parametros.Add("p_nombre");
@@ -42,8 +43,8 @@ namespace clsNegocios
             valores.Add(this.nombre);
             valores.Add(this.cargo);
             valores.Add(this.activo);
-            this.listado = con.Ejecutar(sp_insert, parametros, valores);
-            if (!con.isError)
+            this.listado = conexion.proceder(sp_insert, parametros, valores);
+            if (!conexion.error)
                 foreach (DataRow row in this.listado.Rows) { 
                     this.id_usuario = row["id_usuario"].ToString();
                     this.mensaje = "OK";
@@ -51,16 +52,16 @@ namespace clsNegocios
             else
             {
                 this.id_usuario = "0";
-                this.mensaje = con.MensajeError;
+                this.mensaje = conexion.MensjError;
             }
 
             return this;
 
         }
 
-        public clsUsuario update_ususario()
+        public clsMantenimientoUsuario update_ususario()
         {
-            clsConexion con = new clsConexion();
+            ClassConexion conexion = new ClassConexion();
             parametros.Add("p_id_usuario");
             parametros.Add("p_usuario");
             parametros.Add("p_contrasenna");
@@ -74,8 +75,8 @@ namespace clsNegocios
             valores.Add(this.nombre);
             valores.Add(this.cargo);
             valores.Add(this.activo);
-            this.listado = con.Ejecutar(sp_update, parametros, valores);
-            if (!con.isError)
+            this.listado = conexion.proceder(sp_update, parametros, valores);
+            if (!conexion.error)
                 foreach (DataRow row in this.listado.Rows)
                 {
                     this.id_usuario = row["actualizado"].ToString();
@@ -84,7 +85,7 @@ namespace clsNegocios
             else
             {
                 this.id_usuario = "0";
-                this.mensaje = con.MensajeError;
+                this.mensaje = conexion.MensjError;
             }
 
             return this;
@@ -93,20 +94,20 @@ namespace clsNegocios
 
         public List<clsUsuario> BuscaUsuario()
         {
-            clsConexion con = new clsConexion();
+            ClassConexion conexion = new ClassConexion();
             parametros.Add("p_id_usuario");
             valores.Add(this.id_usuario);
-            this.listado = con.Ejecutar(sp_select_uno, parametros, valores);
-            List<clsUsuario> lista = new List<clsUsuario>();
-            if (!con.isError)
+            this.listado = conexion.proceder(sp_select_uno, parametros, valores);
+            List<clsMantenimientoUsuario> lista = new List<clsMantenimientoUsuario>();
+            if (!conexion.error)
                 foreach (DataRow row in this.listado.Rows)
                 {
-                    lista.Add(new clsUsuario
+                    lista.Add(new clsMantenimientoUsuario
                     {
                         id_usuario = row["id_usuario"].ToString(),
                         usuario = row["usuario"].ToString(),
                         contrasenna = row["contrasenna"].ToString(),
-                        nombre = row["contrasenna"].ToString(),
+                        nombre = row["nombre"].ToString(),
                         cargo = row["cargo"].ToString(),
                         activo = row["activo"].ToString(),
                         fecha_adicion = row["fecha_adicion"].ToString(),
@@ -116,16 +117,16 @@ namespace clsNegocios
             return lista;
         }
 
-        public List<clsUsuario> TodosUsuarios()
+        public List<clsMantenimientoUsuario> TodosUsuarios()
         {
-            clsConexion con = new clsConexion();
+            ClassConexion conexion = new ClassConexion();
 
-            this.listado = con.Ejecutar(sp_select_todos, parametros, valores);
-            List<clsUsuario> lista = new List<clsUsuario>();
-            if (!con.isError)
+            this.listado = conexion.proceder(sp_select_todos, parametros, valores);
+            List<clsMantenimientoUsuario> lista = new List<clsMantenimientoUsuario>();
+            if (!conexion.error)
                 foreach (DataRow row in this.listado.Rows)
                 {
-                    lista.Add(new clsUsuario
+                    lista.Add(new clsMantenimientoUsuario
                     {
                         id_usuario = row["id_usuario"].ToString(),
                         usuario = row["usuario"].ToString(),
