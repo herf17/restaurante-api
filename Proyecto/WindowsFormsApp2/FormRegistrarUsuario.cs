@@ -22,7 +22,7 @@ namespace RestauranteFront
         private void button1_Click(object sender, EventArgs e)
         {
 
-            clsMantenimientoUsuario obj_usuario = new clsMantenimientoUsuario();
+            clsUsuario obj_usuario = new clsUsuario();
             obj_usuario.usuario = txtUsuario.Text;
             obj_usuario.contrasena = txtContrasenna.Text;
             obj_usuario.nombre = txtNombre.Text;
@@ -42,7 +42,7 @@ namespace RestauranteFront
             IRestResponse respuesta = cliente.Execute(peticion);
 
          
-            obj_usuario = JsonConvert.DeserializeObject<clsMantenimientoUsuario>(respuesta.Content);
+            obj_usuario = JsonConvert.DeserializeObject<clsUsuario>(respuesta.Content);
             if (obj_usuario.mensaje == "OK")
                 MessageBox.Show("Se ha creado el usuario con ID " + obj_usuario.id_usuario);
             else

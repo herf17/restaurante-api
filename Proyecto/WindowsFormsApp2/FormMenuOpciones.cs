@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Semestre_P1
+namespace Parcial1
 {
     public partial class menu : Form
     {
@@ -22,13 +22,13 @@ namespace Semestre_P1
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-           // Administracion ecp = new Administracion();
-            // ecp.ShowDialog();
-=======
+//<<<<<<< HEAD
+//           // Administracion ecp = new Administracion();
+//            // ecp.ShowDialog();
+//=======
             FormMenuAdministracion ecp = new FormMenuAdministracion();
             ecp.ShowDialog();
->>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
+//>>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
 
         }
 

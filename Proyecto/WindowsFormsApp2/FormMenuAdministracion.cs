@@ -1,4 +1,5 @@
 ﻿using System;
+using Parcial1;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,9 @@ using System.Windows.Forms;
 using MySqlConnector;
 using System.Data;
 using clsNegocios;
+using RestauranteFront;
 
-namespace Semestre_P1
+namespace Parcial1
 {
     public partial class FormMenuAdministracion : Form
     {
@@ -27,18 +29,19 @@ namespace Semestre_P1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //Formulario ecp = new Formulario();
-            //ecp.ShowDialog();
+
+
+            FormRegistrarUsuario ecp = new FormRegistrarUsuario();
+            ecp.ShowDialog();
         }
 
         private void FormMenuAdministracion_Load(object sender, EventArgs e)
         {
 
-=======
+
             FormRegistrarUsuario ecp = new FormRegistrarUsuario();
             ecp.ShowDialog();
->>>>>>> 6114df3a555751c45d7b76a7d29acb9447860381
+
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ProyectoSemestral
+﻿namespace Parcial1
 {
     partial class FormReportesDeMesa
     {
@@ -122,10 +122,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Orange;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(178, 312);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(203, 416);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 29);
+            this.button3.Size = new System.Drawing.Size(113, 39);
             this.button3.TabIndex = 1;
             this.button3.Text = "Borrar";
             this.button3.UseVisualStyleBackColor = false;
@@ -172,22 +171,20 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.dgvReportesDeMesa);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(51, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(58, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(617, 354);
+            this.groupBox1.Size = new System.Drawing.Size(705, 472);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnImprimir
             // 
             this.btnImprimir.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnImprimir.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnImprimir.Location = new System.Drawing.Point(335, 312);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImprimir.Location = new System.Drawing.Point(383, 416);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(97, 29);
+            this.btnImprimir.Size = new System.Drawing.Size(111, 39);
             this.btnImprimir.TabIndex = 1;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.UseVisualStyleBackColor = false;
@@ -201,11 +198,10 @@
             this.ColumnEstado,
             this.ColumnActivo});
             this.dgvReportesDeMesa.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dgvReportesDeMesa.Location = new System.Drawing.Point(67, 20);
-            this.dgvReportesDeMesa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvReportesDeMesa.Location = new System.Drawing.Point(77, 27);
             this.dgvReportesDeMesa.Name = "dgvReportesDeMesa";
             this.dgvReportesDeMesa.RowHeadersWidth = 51;
-            this.dgvReportesDeMesa.Size = new System.Drawing.Size(486, 274);
+            this.dgvReportesDeMesa.Size = new System.Drawing.Size(555, 365);
             this.dgvReportesDeMesa.StandardTab = true;
             this.dgvReportesDeMesa.TabIndex = 0;
             this.dgvReportesDeMesa.Text = "dataGridView1";
@@ -248,12 +244,11 @@
             // 
             // FormReportesDeMesa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 401);
+            this.ClientSize = new System.Drawing.Size(821, 535);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormReportesDeMesa";

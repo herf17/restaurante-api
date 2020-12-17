@@ -34,7 +34,7 @@ namespace RestauranteFront
             IRestResponse respuesta = cliente.Execute(peticion);
 
 
-            List<clsMantenimientoUsuario> lista_obj = JsonConvert.DeserializeObject<List<clsMantenimientoUsuario>>(respuesta.Content);
+            List<clsUsuario> lista_obj = JsonConvert.DeserializeObject<List<clsUsuario>>(respuesta.Content);
             for(int n = 0; n < lista_obj.Count; n++)
             {
                 String[] arr = { lista_obj[n].id_usuario, lista_obj[n].usuario, lista_obj[n].contrasena, lista_obj[n].nombre, lista_obj[n].cargo, lista_obj[n].activo };

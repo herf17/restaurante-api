@@ -1,15 +1,21 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using WindowsFormsApp2;
 
-namespace ProyectoSemestral
+namespace Parcial1
 {
     public partial class FormReportesDeOrdenes : Form
     {
+        private String urlmesa = "ReportesDeOrdens/ReporteOrdenes";
+        private String mesas = null;
+        List<Model.ReporteOrdenesModel> listaOrdenes;
         public FormReportesDeOrdenes()
         {
             InitializeComponent();
@@ -17,11 +23,21 @@ namespace ProyectoSemestral
 
         private void FormReportesDeOrdenes_Load(object sender, EventArgs e)
         {
-            dgvReportesDeOrdenes.Rows.Add(1, "Soda", 2, 2.32, 10.23);
-            dgvReportesDeOrdenes.Rows.Add(2, "Pizza", 2, 14.00, 28.00);
-            dgvReportesDeOrdenes.Rows.Add(3, "Pollo", 10, 2.0, 20.00);
-            dgvReportesDeOrdenes.Rows.Add(4, "Tamal", 5, 1.75, 8.50);
-            dgvReportesDeOrdenes.Rows.Add(5, "Papas fritas", 5, 1.00, 5.00);
+            ApiBase inicioApi = new ApiBase();
+            IRestResponse respuesta = inicioApi.execApi(urlmesa, mesas);
+            listaOrdenes = JsonConvert.DeserializeObject<List<Model.ReporteOrdenesModel>>(respuesta.Content);
+
+            for (int n = 0; n < listaOrdenes.Count; n++)
+            {
+                String[] arr = { listaOrdenes[n].id_orden,
+                                                listaOrdenes[n].fecha_hora,
+                                                listaOrdenes[n].total,
+                                                listaOrdenes[n].nombre,
+                                                listaOrdenes[n].numero,
+                                                listaOrdenes[n].estado };
+                dgvReportesDeOrdenes.Rows.Add(arr);
+
+                    }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

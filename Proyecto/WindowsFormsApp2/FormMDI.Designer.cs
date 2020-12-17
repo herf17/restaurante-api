@@ -1,4 +1,4 @@
-﻿namespace ProyectoSemestral
+﻿namespace Parcial1
 {
     partial class FormMDI
     {

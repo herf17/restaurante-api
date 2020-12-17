@@ -5,11 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using RestSharp;
+using Newtonsoft.Json;
+using Parcial1;
+using WindowsFormsApp2;
 
-namespace ProyectoSemestral
+namespace Parcial1
 {
     public partial class FormReportesDeVentasTotales : Form
     {
+        private String urlventas = "ReportesDeVentasTotales/ReporteProductos";
+        private String ventas = null;
+        List<Model.ReportesDeVentasTotalesModel> listaventas;
+
         public FormReportesDeVentasTotales()
         {
             InitializeComponent();
@@ -22,11 +30,25 @@ namespace ProyectoSemestral
 
         private void FormReportesDeVentasTotales_Load(object sender, EventArgs e)
         {
-            dgvReportesDeVentasTotales.Rows.Add(1, 2.32,  "12-2-2020");
-            dgvReportesDeVentasTotales.Rows.Add(2, 14.00, "12-2-2020");
-            dgvReportesDeVentasTotales.Rows.Add(3, 20.0,  "12-2-2020");
-            dgvReportesDeVentasTotales.Rows.Add(4, 112.75,"12-2-2020");
-            dgvReportesDeVentasTotales.Rows.Add(5, 70.00, "12-2-2020");
+            ApiBase inicioApi = new ApiBase();
+            IRestResponse respuesta = inicioApi.execApi(urlventas, ventas);
+            listaventas = JsonConvert.DeserializeObject<List<Model.ReportesDeVentasTotalesModel>>(respuesta.Content);
+
+            for (int n = 0; n < listaventas.Count; n++)
+            {
+                Console.WriteLine("Ventas ejecuntandoce");
+                //String[] arr = { listaventas[n].id_producto,
+                //                                listaventas[n].descripcion,
+                //                                listaventas[n].precio,
+                //                                listaventas[n].cantidad,
+                //                                listaventas[n].id_categoria,
+                //                                listaventas[n].activo };
+                //dgvReportesDeVentasTotales.Rows.Add(arr);
+
+            }
+
+
+          
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
