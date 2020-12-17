@@ -58,7 +58,7 @@ namespace clsNegocios
 
         public clsCliente insertCliente()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_nombre");
             param.Add("p_apellido");
             param.Add("p_ultima_compra");
@@ -91,7 +91,7 @@ namespace clsNegocios
 
         public clsCliente updateCliente()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             param.Add("p_id_cliente");
             param.Add("p_nombre");
@@ -124,7 +124,7 @@ namespace clsNegocios
 
         public List<clsCliente> BuscarCliente()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_id_cliente");
             campos.Add(this.id_cliente);
 
@@ -147,7 +147,7 @@ namespace clsNegocios
 
         public List<clsCliente> TodosClientes()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             this.listado = con.proceder(sp_tbl_cliente_select, param, campos);
 

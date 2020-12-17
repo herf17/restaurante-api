@@ -26,7 +26,7 @@ namespace clsNegocios
 
         public List<ReportesDeProductosCLS> ReporteProducto()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             this.mesas = conexion.proceder(sp_SReporte_producto, param, campos);
             List<ReportesDeProductosCLS> lista = new List<ReportesDeProductosCLS>();
             if (!conexion.error)

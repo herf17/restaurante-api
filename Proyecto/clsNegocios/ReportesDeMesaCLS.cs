@@ -22,7 +22,7 @@ namespace clsNegocios
 
         public List<ReportesDeMesaCLS> ReporteMesas()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             this.mesas = conexion.proceder(sp_SReporte_mesa, param, campos);
             List<ReportesDeMesaCLS> lista = new List<ReportesDeMesaCLS>();
             if (!conexion.error)

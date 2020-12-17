@@ -51,7 +51,7 @@ namespace clsNegocios
 
         public clsCategorias insertCategoria()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_nombre");
             param.Add("p_imagen");
             param.Add("p_activo");
@@ -81,7 +81,7 @@ namespace clsNegocios
         }
         public clsCategorias updateCategoria()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_id_categoria");
             param.Add("p_nombre");
             param.Add("p_imagen");
@@ -115,7 +115,7 @@ namespace clsNegocios
 
         public List<clsCategorias> BuscarCategorias()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_id_categoria");
             campos.Add(this.id_categoria);
 
@@ -137,7 +137,7 @@ namespace clsNegocios
 
         public List<clsCategorias> TodosCategorias()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             this.listado = con.proceder(sp_tbl_categoria_select, param, campos);
 

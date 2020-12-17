@@ -35,7 +35,7 @@ namespace clsNegocios
 
         public UsuarioCLS insertUsuario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             parametros.Add("p_usuario");
             parametros.Add("p_nombre");
@@ -70,7 +70,7 @@ namespace clsNegocios
 
         public UsuarioCLS updateUsuario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             parametros.Add("p_id_usuario");
             parametros.Add("p_usuario");
             parametros.Add("p_nombre");
@@ -105,7 +105,7 @@ namespace clsNegocios
 
         public List<UsuarioCLS> BuscaUsuario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             parametros.Add("p_id_usuario");
             valores.Add(this.id_usuario);
 

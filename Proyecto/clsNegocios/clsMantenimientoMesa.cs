@@ -27,7 +27,7 @@ namespace clsNegocios
 
         public clsMantenimientoMesa insert_ususario()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             parametros.Add("p_numero");
             parametros.Add("p_descripcion");
             parametros.Add("p_estado");
@@ -57,7 +57,7 @@ namespace clsNegocios
 
         public clsMantenimientoMesa update_ususario()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             parametros.Add("p_numero");
             parametros.Add("p_descripcion");
             parametros.Add("p_estado");
@@ -88,7 +88,7 @@ namespace clsNegocios
 
         public List<clsMantenimientoMesa> BuscaUsuario()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
             parametros.Add("p_numero");
             valores.Add(this.numero);
             this.listado = conexion.proceder(sp_select_uno, parametros, valores);
@@ -110,7 +110,7 @@ namespace clsNegocios
 
         public List<clsMantenimientoMesa> TodosUsuarios()
         {
-            ClassConexion conexion = new ClassConexion();
+            Conexion conexion = new Conexion();
 
             this.listado = conexion.proceder(sp_select_todos, parametros, valores);
             List<clsMantenimientoMesa> lista = new List<clsMantenimientoMesa>();

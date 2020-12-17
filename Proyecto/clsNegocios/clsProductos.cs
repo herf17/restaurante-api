@@ -54,7 +54,7 @@ namespace clsNegocios
 
         public clsProductos insertProductos()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
            
             param.Add("p_descripcion");
             param.Add("p_precio");
@@ -90,7 +90,7 @@ namespace clsNegocios
 
         public clsProductos updateProductos()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             param.Add("p_id_producto");
             param.Add("p_descripcion");
@@ -124,7 +124,7 @@ namespace clsNegocios
 
         public List<clsProductos> BuscarProductos()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             param.Add("p_id_producto");
             campos.Add(this.id_producto);
 
@@ -148,7 +148,7 @@ namespace clsNegocios
 
         public List<clsProductos> TodosProductos()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             this.listado = con.proceder(sp_tbl_productos_select, param, campos);
 

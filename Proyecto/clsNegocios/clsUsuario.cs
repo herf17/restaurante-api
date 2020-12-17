@@ -29,9 +29,37 @@ namespace clsNegocios
         private DataTable listado;
         public clsUsuario() { }
 
+        public List<clsUsuario> Login()
+        {
+            Conexion con = new Conexion();
+            parametros.Add("p_usuario");
+            parametros.Add("p_contrasenna");
+            valores.Add(this.usuario);
+            valores.Add(this.contrasena);
+            // this.listado = con.proceder(sp_select_tbl_usuario_login, parametros, valores);
+            List<clsUsuario> lista = new List<clsUsuario>();
+            if (!con.error)
+                foreach (DataRow row in this.listado.Rows)
+                {
+                    lista.Add(new clsUsuario
+                    {
+                        id_usuario = row["id_usuario"].ToString(),
+                        usuario = row["usuario"].ToString(),
+                        contrasena = row["contrasena"].ToString(),
+                        nombre = row["nombre"].ToString(),
+                        cargo = row["cargo"].ToString(),
+                        activo = row["activo"].ToString(),
+                        fecha_adicion = row["fecha_adicion"].ToString(),
+                        fecha_modificacion = row["fecha_modificacion"].ToString()
+                    });
+                }
+            return lista;
+        }
+
+
         public clsUsuario insert_ususario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             parametros.Add("p_usuario");
             parametros.Add("p_contrasena");
             parametros.Add("p_nombre");
@@ -62,7 +90,7 @@ namespace clsNegocios
 
         public clsUsuario update_ususario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             parametros.Add("p_id_usuario");
             parametros.Add("p_usuario");
             parametros.Add("p_contrasena");
@@ -95,7 +123,7 @@ namespace clsNegocios
 
         public List<clsUsuario> BuscaUsuario()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
             parametros.Add("p_id_usuario");
             valores.Add(this.id_usuario);
             this.listado = con.proceder(sp_select_uno, parametros, valores);
@@ -120,7 +148,7 @@ namespace clsNegocios
 
         public List<clsUsuario> TodosUsuarios()
         {
-            ClassConexion con = new ClassConexion();
+            Conexion con = new Conexion();
 
             this.listado = con.proceder(sp_select_todos, parametros, valores);
             List<clsUsuario> lista = new List<clsUsuario>();
