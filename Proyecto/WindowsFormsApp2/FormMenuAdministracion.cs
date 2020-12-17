@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using MySqlConnector;
 using System.Data;
 using clsNegocios;
-using RestauranteFront;
 
 namespace Parcial1
 {

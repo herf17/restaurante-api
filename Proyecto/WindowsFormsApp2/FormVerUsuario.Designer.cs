@@ -1,4 +1,4 @@
-﻿namespace RestauranteFront
+﻿namespace Parcial1
 {
     partial class FormVerUsuario
     {

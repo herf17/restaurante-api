@@ -10,8 +10,7 @@ using Newtonsoft.Json;
 using clsNegocios;
 
 
-namespace RestauranteFront
-{
+namespace Parcial1 { 
     public partial class FormLogin : Form
     {
         public FormLogin()

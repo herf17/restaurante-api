@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using RestSharp;
 using Newtonsoft.Json;
 
-namespace RestauranteFront
+namespace Parcial1
 {
     public partial class FormVerUsuario : Form
     {
