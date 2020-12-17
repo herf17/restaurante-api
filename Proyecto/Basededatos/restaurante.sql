@@ -7,7 +7,7 @@ USE restaurante
 CREATE TABLE `tbl_usuario` (
   `id_usuario` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
   `usuario` VARCHAR(20) DEFAULT NULL,
-  `contrasenna` VARCHAR(20) DEFAULT NULL,
+  `contrasena` VARCHAR(20) DEFAULT NULL,
   `nombre` VARCHAR(30) DEFAULT NULL,
   `cargo` VARCHAR(20) DEFAULT NULL,
   `activo` VARCHAR(1) DEFAULT NULL COMMENT '1=Activo, 0=inactivo',
@@ -22,7 +22,7 @@ SELECT * FROM tbl_usuario
 
 -----------------------------------------------------------------------------------------------
 
-INSERT  INTO `tbl_usuario`(`id_usuario`,`usuario`,`contrasenna`,`nombre`,`cargo`,`activo`,`fecha_adicion`,`fecha_modificacion`) VALUES 
+INSERT  INTO `tbl_usuario`(`id_usuario`,`usuario`,`contrasena`,`nombre`,`cargo`,`activo`,`fecha_adicion`,`fecha_modificacion`) VALUES 
 (1,'Marilyn','1','Marilyn','Mesero','0','2020-10-15 22:23:20',NULL),
 (2,'Hiram','2','Hiram','mesero','1','2020-10-15 22:31:13',NULL),
 (3,'Teñikaler','3','Teñikaler','mesero','1','2020-10-15 22:31:13',NULL),
@@ -31,14 +31,14 @@ INSERT  INTO `tbl_usuario`(`id_usuario`,`usuario`,`contrasenna`,`nombre`,`cargo`
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_tbl_usuario`(IN p_usuario VARCHAR(20),
-						    IN p_contrasenna VARCHAR(20),
+CREATE PROCEDURE `sp_insert_tbl_usuario`(IN p_usuario VARCHAR(20),
+						    IN p_contrasena VARCHAR(20),
 						    IN p_nombre VARCHAR(30),
 						    IN p_cargo VARCHAR(20),
 						    IN p_activo VARCHAR(1))
 BEGIN
-		INSERT INTO tbl_usuario (usuario, contrasenna, nombre, cargo, activo, fecha_adicion)
-		VALUES (p_usuario, p_contrasenna, p_nombre, p_cargo, p_activo, NOW());
+		INSERT INTO tbl_usuario (usuario, contrasena, nombre, cargo, activo, fecha_adicion)
+		VALUES (p_usuario, p_contrasena, p_nombre, p_cargo, p_activo, NOW());
 		
 		SELECT @@identity AS id_usuario;
 		
@@ -49,9 +49,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_tbl_usuario_todos`()
+CREATE PROCEDURE `sp_select_tbl_usuario_todos`()
 BEGIN
-		SELECT `id_usuario`, `usuario`, `contrasenna`, `nombre`, `cargo`, `activo`, `fecha_adicion`, `fecha_modificacion`
+		SELECT `id_usuario`, `usuario`, `contrasena`, `nombre`, `cargo`, `activo`, `fecha_adicion`, `fecha_modificacion`
 		FROM `tbl_usuario`;
 	END $$
 DELIMITER ;
@@ -60,9 +60,9 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_tbl_usuario_uno`(IN p_id_usuario VARCHAR(20))
+CREATE PROCEDURE `sp_select_tbl_usuario_uno`(IN p_id_usuario VARCHAR(20))
 BEGIN
-		SELECT `id_usuario`, `usuario`, `contrasenna`, `nombre`, `cargo`, `activo`, `fecha_adicion`, `fecha_modificacion`
+		SELECT `id_usuario`, `usuario`, `contrasena`, `nombre`, `cargo`, `activo`, `fecha_adicion`, `fecha_modificacion`
 		FROM `tbl_usuario`
 		WHERE id_usuario = p_id_usuario;
 	END $$
@@ -72,16 +72,16 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_tbl_usuario`(IN p_id_usuario VARCHAR(20),
+CREATE PROCEDURE `sp_update_tbl_usuario`(IN p_id_usuario VARCHAR(20),
 						    IN p_usuario VARCHAR(20),
-						    IN p_contrasenna VARCHAR(20),
+						    IN p_contrasena VARCHAR(20),
 						    IN p_nombre VARCHAR(30),
 						    IN p_cargo VARCHAR(20),
 						    IN p_activo VARCHAR(1))
 BEGIN
 		UPDATE tbl_usuario 
 		   SET usuario     = p_usuario,
-		       contrasenna = p_contrasenna,
+		       contrasena = p_contrasena,
 		       nombre      = p_nombre,
 		       cargo       = p_cargo,
 		       activo      = p_activo ,
@@ -135,7 +135,7 @@ SELECT * FROM tbl_mesa
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_tbl_mesa`(IN p_numero VARCHAR(20),
+CREATE PROCEDURE `sp_insert_tbl_mesa`(IN p_numero VARCHAR(20),
 						    IN p_descripcion VARCHAR(100),
 						    IN p_estado VARCHAR(1),
 						    IN p_cargo VARCHAR(20),
@@ -153,7 +153,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_tbl_mesa_todos`()
+CREATE PROCEDURE `sp_select_tbl_mesa_todos`()
 BEGIN
 		SELECT `numero`, `descripcion`, `estado`,`cargo`, `activo`
 		FROM `tbl_mesa`;
@@ -164,7 +164,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_tbl_mesa_uno`(IN p_numero VARCHAR(20))
+CREATE PROCEDURE `sp_select_tbl_mesa_uno`(IN p_numero VARCHAR(20))
 BEGIN
 		SELECT `numero`, `descripcion`, `estado`, `cargo`, `activo`
 		FROM `tbl_mesa`
@@ -176,7 +176,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_tbl_mesa`(IN p_numero VARCHAR(20),
+CREATE PROCEDURE `sp_update_tbl_mesa`(IN p_numero VARCHAR(20),
 						    IN p_descripcion VARCHAR(20),
 						    IN p_estado VARCHAR(20),
 						    IN p_cargo VARCHAR(20),
@@ -184,7 +184,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_tbl_mesa`(IN p_numero VAR
 BEGIN
 		UPDATE tbl_mesa
 		   SET numero     = p_usuario,
-		       descripcion = p_contrasenna,
+		       descripcion = p_descripcion,
 		       estado      = p_nombre,
 		       cargo       = p_cargo,
 		       activo      = p_activo,
