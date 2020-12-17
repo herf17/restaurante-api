@@ -7,7 +7,8 @@ namespace WindowsFormsApp2
 {
     public class ApiBase
     {
-        private String urlApi = "http://herf17-001-site1.ftempurl.com/api/";
+        //private String urlApi = "http://herf17-001-site1.ftempurl.com/api/";
+        private String urlApi = "http://tenismith23-001-site1.itempurl.com/api/";
         public IRestResponse execApi(String direc,String json)
         {
             urlApi = String.Concat(urlApi, direc);

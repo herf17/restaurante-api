@@ -26,6 +26,7 @@ namespace clsNegocios
         private string sp_update = "sp_update_tbl_usuario";
         private string sp_select_uno = "sp_select_tbl_usuario_uno";
         private string sp_select_todos = "sp_select_tbl_usuario_todos";
+        private string sp_select_tbl_usuario_login = "sp_select_tbl_usuario_login";
         private DataTable listado;
         public clsUsuario() { }
 
@@ -33,10 +34,10 @@ namespace clsNegocios
         {
             Conexion con = new Conexion();
             parametros.Add("p_usuario");
-            parametros.Add("p_contrasenna");
+            parametros.Add("p_contrasena");
             valores.Add(this.usuario);
             valores.Add(this.contrasena);
-            // this.listado = con.proceder(sp_select_tbl_usuario_login, parametros, valores);
+            this.listado = con.proceder(sp_select_tbl_usuario_login, parametros, valores);
             List<clsUsuario> lista = new List<clsUsuario>();
             if (!con.error)
                 foreach (DataRow row in this.listado.Rows)

@@ -13,7 +13,7 @@ namespace Parcial1
 {
     public partial class FormReportesDeOrdenes : Form
     {
-        private String urlmesa = "ReportesDeOrdens/ReporteOrdenes";
+        private String urlmesa = "ReportesDeOrdenes/ReporteOrdenes";
         private String mesas = null;
         List<Model.ReporteOrdenesModel> listaOrdenes;
         public FormReportesDeOrdenes()

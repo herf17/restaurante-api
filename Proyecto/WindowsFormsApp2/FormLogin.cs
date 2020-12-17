@@ -34,7 +34,7 @@ namespace Parcial1 {
             string json = JsonConvert.SerializeObject(obj_usuario);
 
     
-            var cliente = new RestClient("http://infodd-001-site1.ftempurl.com/api/usuario/login");
+            var cliente = new RestClient("http://tenismith23-001-site1.itempurl.com/api/usuario/login");
             cliente.Timeout = -1;
 
             var peticion = new RestRequest(Method.POST);
@@ -49,7 +49,7 @@ namespace Parcial1 {
                 this.Close();
             }
             else
-                MessageBox.Show("Erro de usuario o Contraseña");
+                MessageBox.Show("Error de usuario o Contraseña");
         }
 
 
